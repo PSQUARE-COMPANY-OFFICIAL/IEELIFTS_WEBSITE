@@ -1,0 +1,55 @@
+import { Navigate, Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Layout from "../../Layout";
+import AccomplishedWork from "../../pages/AccomplishedWorkPage/accomplishedWorkPage";
+import Home from "../../pages/HomePage/homePage";
+import BlogPage from "../../pages/blogsPage/blogsPage";
+import Contact from "../../pages/ContactPage/Contact";
+import Safety from "../../pages/SafetyPage/Safety.jsx";
+import ProcessPage from "../../pages/Process/ProcessPage.jsx";
+import PrivacyPolicy from "../../pages/Documents/PrivacyPolicy.jsx";
+import TernAndCondition from "../../pages/Documents/TernAndCondition.jsx";
+import AboutPage from "../../pages/About/AboutPage.jsx";
+import Maintenance from "../../pages/Maintenance/Maintenance.jsx";
+import Center from "../../pages/Center/Center.jsx";
+import CommercialLifts from "../../pages/Lifts/CommercialLifts/commercialLift.jsx";
+import HospitalLifts from "../../pages/Lifts/HospitalLifts/hospitalLifts.jsx";
+import HotelLifts from "../../pages/Lifts/HotelLifts/hotelLifts.jsx";
+import ResidentialLifts from "../../pages/Lifts/ResidentialLifts/residentialLifts.jsx";
+import IndustrialLifts from "../../pages/Lifts/IndustrialLifts/industrialLifts.jsx";
+import CustomizeLifts from "../../pages/CustomizeLifts/customizeLifts.jsx";
+
+
+const Routing = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<AboutPage/>}/>
+
+          <Route path="/commercial-lifts" element={<CommercialLifts/>}/>
+          <Route path="/hospital-lifts" element={<HospitalLifts/>}/>
+          <Route path="/hotel-lifts" element={<HotelLifts/>}/>
+          <Route path="/residential-lifts" element={<ResidentialLifts/>}/>
+          <Route path="/industrial-lifts" element={<IndustrialLifts/>}/>
+
+          <Route path="/maintenance" element={<Maintenance/>}/>
+          <Route path="/accomplished-work" element={< AccomplishedWork/>} />
+          <Route path="/process" element={<ProcessPage/>}/>
+          <Route path="/safety" element={<Safety/>}/>
+          <Route path="/contact" element={<Contact/>}/>
+          <Route path="/customize-lifts" element={<CustomizeLifts/>}/>
+
+          <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
+          <Route path="/terms-and-conditions" element={<TernAndCondition/>}/>
+          <Route path="/blog" element={<BlogPage/>}/>
+          <Route path="/experience-center" element={<Center/>}/>
+          
+        </Route>
+        <Route path="*" element={<h1>Page not found</h1>} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default Routing;

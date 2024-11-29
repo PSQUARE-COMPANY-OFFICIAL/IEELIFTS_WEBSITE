@@ -1,0 +1,80 @@
+.hydraulic_lifts_container{
+    padding: 5rem 0;
+    background-color: var(--light-theme);
+    font-family: "Barlow", Sans-serif;
+    /* background-color: aquamarine; */
+
+}
+
+.hydraulic_lifts_sub_container{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    max-width: 1375px;
+  /* background-color: aquamarine; */
+    margin: auto;
+    padding: 0px 0 0;
+    width: 90%;
+    gap: 4rem;
+}
+
+.hydraulic_lifts_left_container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.hydraulic_lifts_left_container_title{
+    text-align: left;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.hydraulic_lifts_left_container_text{
+    text-align: left;
+    color: var(--light-text);
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.hydraulic_lifts_left_container_vm_btn{
+    background-color: var(--primary-color);
+    border: none;
+    font-weight: 400;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    /* width: 10rem; */
+}
+.hydraulic_lifts_right_container{
+    width: 50%;
+}
+
+.hydraulic_lifts_right_container img{
+   width: 100%;
+}
+
+
+
+@media(max-width:480px){
+    .hydraulic_lifts_sub_container{
+        flex-direction: column-reverse;
+        
+    }
+
+    .hydraulic_lifts_right_container{
+        width: 100%;
+    }
+
+    .hydraulic_lifts_left_container{
+        width: 100%;
+    }
+
+}
+
+/* @media (max-width:1920px){
+    .hydraulic_lifts_container{
+        padding: 5rem 7.5vw;
+    }
+} */

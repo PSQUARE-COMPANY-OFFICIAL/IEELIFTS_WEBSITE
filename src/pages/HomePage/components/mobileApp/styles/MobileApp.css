@@ -1,0 +1,88 @@
+.mobile_app_container{
+  background-color: var(--light-theme);
+  /* padding: 0 15vw; */
+  font-family: "Barlow", Sans-serif;
+}
+
+.mobile_app_sub_container{
+    display: flex;
+  /* flex-direction: column; */
+    align-items: center;
+    margin: auto;
+    max-width: 1375px;
+  /* background-color: aquamarine; */
+    margin: auto;
+    padding: 0px 0 0;
+    width: 90%;
+}
+
+.mobile_app_right{
+    margin-left: 8rem;
+    position: relative;
+    bottom: 10vh;
+}
+
+.mobile_app_right h1{
+    color: var(--primary-color);
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.mobile_app_right h3{
+    color: white;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.6rem;
+}
+
+@media (max-width:1080px){
+  .mobile_app_left img{
+    width: 100%;
+  }
+
+  .mobile_app_right{
+    margin-left: 4rem;
+    position: relative;
+    bottom: 0;
+    width: 50%;
+}
+}
+
+@media(max-width:640px){
+  .mobile_app_sub_container{
+    flex-direction: column;
+    padding: 3rem 0 5rem 0;
+
+  }
+
+  .mobile_app_left img{
+    width: 100%;
+    margin-bottom: 2rem;
+    /* position: relative;
+    bottom: 5rem; */
+  }
+
+  .mobile_app_right{
+    margin-left: 0rem;
+    position: relative;
+    bottom: 0vh;
+    /* background-color: aquamarine; */
+    width: 100%;
+  }
+
+  .mobile_app_right h1{
+    font-size: 1.5rem;
+  }
+
+  .mobile_app_right h3{
+     font-size:1rem;
+
+    }
+}
+
+/* @media(max-width){
+  .hydraulic_lifts_container{
+    padding: 0rem 7.5vw;
+  }
+} */

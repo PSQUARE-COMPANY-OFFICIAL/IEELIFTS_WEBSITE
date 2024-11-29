@@ -1,0 +1,16 @@
+.lifts_container{
+    background-color: var(--light-theme);
+    width: 100%;
+}
+
+.lifts_sub_container{
+    max-width: 1375px;
+    margin: auto;
+    padding: 0px 0 0;
+    width: 90%;
+}
+
+.lift_characteristics_container_section{
+    
+}
+

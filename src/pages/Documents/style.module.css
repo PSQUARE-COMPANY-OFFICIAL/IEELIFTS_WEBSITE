@@ -1,0 +1,23 @@
+.container {
+    background-color: var(--light-theme);
+    width: 100%;
+  }
+  .innerContainer {
+    max-width: 1375px;
+    margin: auto;
+    padding: 120px 0 0;
+    width: 95%;
+  }
+  .text {
+    text-align: left;
+    color: var(--light-text);
+    font-size: 18px;
+  }
+  .hedding {
+    font-family: "Barlow", Sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+    text-align: left;
+    font-size: 28px;
+    color: var(--white);
+  }

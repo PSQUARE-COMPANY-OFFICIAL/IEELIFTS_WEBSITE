@@ -1,0 +1,129 @@
+.get_in_touch_container{
+    background-color: var(--light-theme);
+    padding: 5rem 0;
+    grid-area: contact;
+}
+
+.get_in_touch_sub_container{
+    display: flex;
+    gap: 1.75rem;
+    margin:  auto;
+    max-width: 1375px;
+  /* background-color: aquamarine; */
+    margin: auto;
+    width: 90%;
+}
+
+.get_in_touch_left{
+    width: 100%;
+}
+
+.get_in_touch_left img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.get_in_touch_right{
+    display: flex
+    ;
+        flex-direction: column;
+        justify-content: space-between;
+width: 100%;
+/* background-color: chocolate; */
+}
+
+.get_in_touch_right_title{
+    color: white;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.get_in_touch_right_text{
+    color: var(--light-text);
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+
+
+.get_in_touch_form_container{
+    display: flex;
+    flex-direction: column;
+}
+
+.get_in_touch_form_container_up{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:repeat(2,1fr) ;
+    gap: 1rem;
+}
+
+
+.get_in_touch_form_container_up input{
+    width: 100%;
+    /* height: 4rem; */
+    outline: none;
+    padding: 1rem;
+}
+
+
+.get_in_touch_form_input_box{
+    display:flex;
+    flex-direction:column;
+    align-items:start;
+    color:var(--light-text);
+    width: 100%;
+    
+}
+
+.get_in_touch_form_input_box label{
+    margin-bottom: 0.25rem;
+}
+
+.get_in_touch_form_input_box span{
+    color: red;
+}
+
+.get_in_touch_form_text_area{
+    display:flex;
+    flex-direction:column;
+    align-items:start;
+    color:var(--light-text);
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.get_in_touch_submit_btn{
+    background-color: var(--primary-color);
+    border: none;
+    font-weight: 400;
+    padding: 1rem 4rem;
+    width: 10rem;
+    cursor: pointer;
+}
+
+/* @media (max-width: 1920px){
+    .get_in_touch_container {
+        padding: 5rem 7.5vw;
+    }
+} */
+@media (max-width: 480px){
+    .get_in_touch_sub_container{
+        flex-direction: column;
+        padding:  2rem 0   ;
+    }
+
+    .get_in_touch_form_container_up{
+
+        /* grid-template-rows:repeat(4,1fr) ; */
+        display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows:repeat(4,1fr) ;
+    gap: 1rem;
+
+    }
+}

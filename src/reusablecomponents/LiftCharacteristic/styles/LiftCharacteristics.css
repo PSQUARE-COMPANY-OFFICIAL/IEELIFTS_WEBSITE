@@ -1,0 +1,77 @@
+.lift_characteristics_container{
+ display: grid;
+ grid-template-areas: " characteristics image";
+ grid-template-columns: repeat(2,1fr);
+ font-family: 'Barlow',sans-serif;
+ width: 100%;
+ text-align: left;
+ padding: 8rem 0;
+ gap: 3rem;
+
+}
+
+.lift_characteristics_left_container{
+width: 100%;
+/* height: fit-content; */
+display: flex;
+flex-direction: column;
+justify-content: center;
+grid-area: characteristics;
+}
+
+.lift_characteristics_title{
+    font-size: 2.3rem;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+
+}
+
+.lift_characteristics_subtitle_text_box{
+    margin-bottom: 1.5rem;
+}
+
+.lift_characteristics_subtitle{
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    font-weight: 400;
+    margin-bottom: 1rem;
+
+}
+.lift_characteristics_text{
+    font-size: 1.1rem;
+    color: var(--light-text);
+    font-weight: 400;
+}
+
+
+
+.lift_characteristics_right_container{
+    width: 100%;
+    height: 100%;
+    height: fit-content;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: start;
+    grid-area: image;
+}
+
+.lift_characteristics_right_container img{
+    height: 100%;
+    width: 100%;
+    border-radius: 0.2rem;
+    object-fit: cover;
+    height: 100vh;
+    /* transform: scale(0.9); */
+}
+
+
+@media (max-width:768px){
+    .lift_characteristics_container{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-areas: "image"
+        "characteristics"
+        ;
+        padding: 3rem 0;
+    }
+}

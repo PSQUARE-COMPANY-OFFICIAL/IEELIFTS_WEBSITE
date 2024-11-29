@@ -1,0 +1,88 @@
+.customize_lifts_page_container{
+    background-color: var(--light-theme);
+    width: 100%;
+    font-family: 'Barlow',sans-serif;
+    padding: 5rem 0;
+}
+
+
+.customize_lifts_page_inner_container{
+    /* background-color: aquamarine; */
+    max-width: 1375px;
+    margin: auto;
+    padding: 0px 0 0;
+    width: 90%;
+}
+
+.customize_lifts_reachus_section{
+margin: auto;
+width: 75%;
+}
+
+.customize_lifts_reachus_section h2{
+    font-weight: 400;
+    color: white;
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+}
+.customize_lifts_reachus_section h4{
+    font-weight: 400;
+    color: var(--light-text);
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+.select-construction,.select-lift-type{
+    font-family: 'Barlow',sans-serif;
+    color: var(--light-text);
+    padding: 0 0.75rem;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.select-construction{
+    height: 3.2rem;
+}
+
+.select-construction {
+    text-transform: capitalize;
+}
+
+.select-lift-type {
+    text-transform: uppercase;
+}
+
+
+.select-construction option, .select-lift-type option{
+    background-color: rgba(236, 179, 20, 0.918);
+    color: black;
+    width: 100%;
+}
+
+select.select  option:hover{
+    background-color: rgb(94, 182, 240)
+}
+
+
+@media (max-width:640px) {
+    .customize_lifts_reachus_section{
+        margin: auto;
+        width: 100%;
+        }
+
+    .customize_lifts_reachus_section{
+        text-align: left;
+    }  
+    
+    .customize_lifts_reachus_section h2{
+        font-size: 2rem;
+    }
+    .customize_lifts_reachus_section h4{
+        font-size: 1.1rem;
+    }
+}
+
+

@@ -1,0 +1,47 @@
+.h1 {
+  color: var(--primary-color);
+  font-family: "Barlow", Sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 3.2rem;
+}
+.p {
+  font-family: "Barlow", Sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--white);
+  font-size: 20px;
+}
+.heroSection {
+  height: 550px;
+  position: relative;
+}
+
+.heroImage {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  object-fit: cover;
+  height: 100%;
+}
+
+.heroContent {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+@media (max-width:768px){
+  .h1 {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,87 @@
+.container {
+  background-color: var(--light-theme);
+  width: 100%;
+}
+
+.innerContainer {
+  max-width: 1375px;
+  margin: auto;
+  padding: 120px 0 0;
+  width: 95%;
+}
+.cardContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  min-width: 200px;
+  flex: 1 1;
+  background-color: var(--light-theme-one);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 3%;
+  gap: 15px;
+}
+.cardImage {
+  background-color: var(--light-theme);
+  aspect-ratio: 1;
+  width: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardText {
+  color: var(--primary-color);
+  font-family: "Barlow", Sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+.box {
+  flex: 1;
+  min-width: 500px;
+}
+.heddingText {
+  text-align: left;
+  color: var(--primary-color);
+  font-size: 18px;
+}
+.hedding {
+  font-family: "Barlow", Sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  text-align: left;
+  font-size: 36px;
+  color: var(--white);
+}
+.card{
+  min-width: 300px;
+}
+.text {
+  text-align: left;
+  color: var(--light-text);
+  font-size: 18px;
+}
+.imgContainer{
+  max-width: 540px;
+  flex: 1;
+  min-width: 400px;
+}
+
+@media (max-width: 1480px) {
+  .innerContainer {
+    max-width: 1200px;
+  }
+}
+@media (max-width: 1368px) {
+  .cardContainer {
+    flex-wrap: wrap !important;
+  }
+  .card {
+    flex: 1 1 calc(33.33% - 20px);
+  }
+}

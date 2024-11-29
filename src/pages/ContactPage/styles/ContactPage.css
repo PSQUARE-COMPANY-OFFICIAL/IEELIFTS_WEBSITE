@@ -1,0 +1,60 @@
+.contact_page_container{
+    background-color: var(--light-theme);
+    width: 100%;
+}
+
+
+.contact_page_inner_container{
+    /* background-color: aquamarine; */
+    max-width: 1375px;
+    margin: auto;
+    padding: 0px 0 0;
+    width: 90%;
+}
+
+
+.cards_section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    /* padding-bottom: 3rem; */
+
+}
+.contact_form_map_container iframe{
+    grid-area: map;
+}
+
+
+
+.contact_form_map_container{
+    padding-bottom: 5rem ;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    grid-template-areas: 
+        "contact map";
+}
+
+@media (max-width:768px){
+    .cards_section{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .contact_form_map_container{
+       
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "map  "
+        "contact";
+    }
+
+    .contact_form_map_container iframe{
+        height: 40vh;
+        margin-bottom: 1rem;
+    }
+
+    .cards_section{
+        padding: 3rem 0;
+    
+    }
+}

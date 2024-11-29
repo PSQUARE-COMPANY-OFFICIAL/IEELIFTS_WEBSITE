@@ -1,0 +1,20 @@
+.accomplishment_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accomplished_work{
+    font-family: "Barlow", Sans-serif;
+    font-weight: 400;
+    color:var(--primary-color);
+    font-size: 3.125rem;
+}
+
+.accomplishment_container_childtext{
+    font-family: "Barlow", Sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+}

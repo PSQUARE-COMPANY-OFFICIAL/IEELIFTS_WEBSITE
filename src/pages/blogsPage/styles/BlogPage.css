@@ -1,0 +1,15 @@
+.blog_page_container{
+    font-family: "Barlow", Sans-serif;
+    backdrop-filter: blur(2rem);
+    padding-top: 10rem;
+    background-color: var(--light-theme-one);
+    width: 100%;
+}
+
+.blog_page_sub_container{
+    position: relative;
+    margin: auto;
+    width: 90%;
+    max-width: 1375px;
+    /* height: 100vh; */
+}
