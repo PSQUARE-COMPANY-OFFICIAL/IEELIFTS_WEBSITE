@@ -1,7 +1,8 @@
 import React from "react";
 import './styles/Ourblogs.css'
-import { homeOurBlogsData } from "./styles/OurBlogData";
+import { blogsData, homeOurBlogsData } from "./styles/OurBlogData";
 import BlogWidget from "../reusableComponents/blogWidget";
+import { NavLink } from "react-router-dom";
 
 
 const OurBlogs = () => {
@@ -19,7 +20,7 @@ const OurBlogs = () => {
         
         <div className="our_blogs_homes_widgets_section">
             {homeOurBlogsData.map((item,index)=>(
-                <BlogWidget key={index+1} image={item.image} title={item.title} date={item.date} alt='Blog Image'/>
+               <NavLink style={{textDecoration:'none'}} key={index+1} to={'/blog/241'}><BlogWidget   image={item.image} title={item.title} date={item.date} alt='Blog Image'/></NavLink>
             ))}
         </div>
       </div>

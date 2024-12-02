@@ -1,14 +1,17 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import homePageImage from "../../../../assets/Home/homePageImage.jpg";
 import { FaPlay, FaPause } from "react-icons/fa";
 import VideoIeeLifts from "../../../../assets/Home/iee-lifts-video-02.mp4";
 import "./styles/Landing.css";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Landing = () => {
   const [state, setState] = useState({
     play: false,
     zIndex: -3,
   });
+
+  const navigate=useNavigate()
 
 
   const videoRef = useRef(null);
@@ -24,6 +27,11 @@ const Landing = () => {
       zIndex: prevState.zIndex === -3 ? -1 : -3, 
     }));
   };
+
+
+   useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="landing_container">
@@ -49,7 +57,7 @@ const Landing = () => {
           </h3>
           <div className="landing_container_left_download_customize_container">
             <div>DOWNLOAD CATALOG </div>
-            <div>CUSTOMISE YOUR LIFT</div>
+            <div onClick={()=>navigate('/customize-lifts')}>CUSTOMISE YOUR LIFT</div>
           </div>
         </div>
         <div className="landing_container_right">

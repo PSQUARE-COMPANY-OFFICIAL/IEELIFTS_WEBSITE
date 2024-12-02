@@ -13,3 +13,19 @@
   box-sizing: border-box;
 }
 
+
+::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #272727;
+}
+
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
+  background: linear-gradient(135deg, #D3A50F, #FFE6CC);;
+  cursor: grab;
+}

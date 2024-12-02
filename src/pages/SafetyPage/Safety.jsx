@@ -4,6 +4,7 @@ import style from "./style.module.css";
 import Footer from "../../commonComponents/footer/footer";
 import OurPatrons from "../AccomplishedWorkPage/components/ourpatrons/ourPatrons";
 import AuthorisedPartners from "../HomePage/components/abhishekAuthorisedPartners/authorisedPartners";
+import bannerImage from '../../assets/safetyBannerImage.jpg'
 import img6 from "./safety-icon-06.png";
 import img1 from "./safety-icon-01.png";
 import img2 from "./safety-icon-02.png";
@@ -47,7 +48,7 @@ function Safety() {
     <>
       <HeroSection
         img={
-          "https://ieelifts.com/wp-content/uploads/2023/01/safty-banner-img01.jpg"
+          bannerImage
         }
         title="Safety"
         text="Your Safety is our Priority"

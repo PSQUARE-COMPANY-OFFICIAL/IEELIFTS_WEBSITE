@@ -2,7 +2,6 @@ import { Navigate, Route, BrowserRouter as Router, Routes } from "react-router-d
 import Layout from "../../Layout";
 import AccomplishedWork from "../../pages/AccomplishedWorkPage/accomplishedWorkPage";
 import Home from "../../pages/HomePage/homePage";
-import BlogPage from "../../pages/blogsPage/blogsPage";
 import Contact from "../../pages/ContactPage/Contact";
 import Safety from "../../pages/SafetyPage/Safety.jsx";
 import ProcessPage from "../../pages/Process/ProcessPage.jsx";
@@ -17,6 +16,8 @@ import HotelLifts from "../../pages/Lifts/HotelLifts/hotelLifts.jsx";
 import ResidentialLifts from "../../pages/Lifts/ResidentialLifts/residentialLifts.jsx";
 import IndustrialLifts from "../../pages/Lifts/IndustrialLifts/industrialLifts.jsx";
 import CustomizeLifts from "../../pages/CustomizeLifts/customizeLifts.jsx";
+import BlogPageById from "../../pages/blogsPage/blogsPageById.jsx";
+import BlogPage from "../../pages/blogsPage/blogPage.jsx";
 
 
 const Routing = () => {
@@ -43,6 +44,7 @@ const Routing = () => {
           <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
           <Route path="/terms-and-conditions" element={<TernAndCondition/>}/>
           <Route path="/blog" element={<BlogPage/>}/>
+          <Route path="/blog/:id" element={<BlogPageById/>}/>
           <Route path="/experience-center" element={<Center/>}/>
           
         </Route>

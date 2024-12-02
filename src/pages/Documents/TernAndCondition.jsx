@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import HeroSection from "../../commonComponents/HeroSection/HeroSection";
 import Footer from "../../commonComponents/footer/footer";
 import style from "./style.module.css";
-
+import bannerImage from '../../assets/privacyBannerImage.jpg'
 function TernAndCondition() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -11,7 +11,7 @@ function TernAndCondition() {
     <>
       <HeroSection
         img={
-          "https://ieelifts.com/wp-content/uploads/2023/01/maintenance-bannerimg01.jpg"
+          bannerImage
         }
         title="Terms And Conditions"
         text=""

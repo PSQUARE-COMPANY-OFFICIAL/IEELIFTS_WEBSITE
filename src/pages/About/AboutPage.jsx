@@ -7,6 +7,7 @@ import style from "./style.module.css";
 import Accredentials from "../HomePage/components/Accredentials/accredentials";
 import HomeAchievement from "../HomePage/components/homeAchievement/homeAchievement";
 import AuthorisedPartners from "../HomePage/components/abhishekAuthorisedPartners/authorisedPartners";
+import bannerImage from '../../assets/aboutBannerImage.jpg'
 import { NavLink } from "react-router-dom";
 import { achievementWidgetData } from "../HomePage/components/reusableComponents/widgetData";
 import AchievementWidget from "../HomePage/components/reusableComponents/achievementWidget";
@@ -19,7 +20,7 @@ function AboutPage() {
     <>
       <HeroSection
         img={
-          "https://ieelifts.com/wp-content/uploads/2023/01/process-pg-banner01.png"
+          bannerImage
         }
         title="About"
         text="Leading the way in Lift Innovation and Excellence"

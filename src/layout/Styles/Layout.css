@@ -14,6 +14,21 @@
     justify-content: center;
 }
 
+.whatsapp_icon_container{
+    
+        background-color: #25D366;
+        width: fit-content;
+        z-index: 10;
+        position: fixed;
+        right: 1.25rem;
+        bottom: 1.5rem;
+        padding: 16px;
+        display: flex;
+        align-items: center; 
+        border-radius: 50%;
+        cursor: pointer;
+      
+}
 
 
 

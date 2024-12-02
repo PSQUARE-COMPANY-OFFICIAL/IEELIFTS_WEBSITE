@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import './styles/Faq.css'
 import Accordion from '../accordian/accordian'
-import { faqData } from './FaqData'
+import { faqDefaultData } from './FaqData'
 import { useGetAllFaqsQuery } from '../../redux/rtkQuery/rtkQuery'
 const Faq = () => {
   const [faqsData, setFaqData] = useState();
   const { data, error, isLoading } = useGetAllFaqsQuery();
+  const displayData=faqsData??faqDefaultData
+
+
+  
 
   useEffect(() => {
-    if (data?.data && !isLoading && !error) {
+    async function dataSetting(){
       setFaqData(data.data);
-    }
-  }, [data, isLoading, error]);
-
-  console.log('data in state:',faqsData)
+     }
+     dataSetting();
+  }, [data]);
 
   
   return (
@@ -21,8 +24,8 @@ const Faq = () => {
       <div className='faq_sub_container'>
         <h1 className='frequently_asked_question_text'>Frequently Asked Questions</h1>
         <div className='faq_lower_section'>
-            {faqsData?.map((item,index)=>(
-              <Accordion key={index+1} title={item.question.questionText} content={item.answer.answerText}/>
+            {displayData?.map((item,index)=>(
+              <Accordion key={index+1} title={item.question.questionText} content={item.answer?.answerText}/>
             ))}
         </div>
       </div>

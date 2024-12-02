@@ -1,16 +1,16 @@
-.blog_page_container{
+.blog_page_by_id_container{
     width: 100%;
     overflow-x: hidden;
     
     /* background-color: aqua; */
 }
 
-.blog_page_container a{
+.blog_page_by_id_container a{
     color: var(--primary-color);
     text-decoration: none;
 }
 
-.blog_page_subcontainer {
+.blog_page_by_id_subcontainer {
 
     
 }

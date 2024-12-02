@@ -68,6 +68,8 @@ const CustomizeLifts = () => {
             <input
               type="text"
               id="Name"
+              minLength="3"
+              maxLength="100"
               value={state.name}
               onChange={(e) =>
                 dispatch({ type: types.SET_FIELD, field: "name", value: e.target.value })
@@ -81,7 +83,8 @@ const CustomizeLifts = () => {
               Phone Number <span>*</span>
             </label>
             <input
-              type="number"
+              type="tel"
+              minLength={10}
               maxLength={10}
               id="PhoneNumber"
               value={state.phoneNumber}
@@ -145,6 +148,7 @@ const CustomizeLifts = () => {
             </label>
             <input
               type="number"
+              min={2}
               id="no-of-floors"
               value={state.noOfFloors}
               onChange={(e) =>
@@ -161,6 +165,8 @@ const CustomizeLifts = () => {
           </label>
           <textarea
             id="Message"
+            minLength="20"
+            maxLength="1000"
             style={{ width: "100%", height: "13.25rem" ,padding:'1rem',outline:'none',fontFamily:'sans-serif'}}
             value={state.message}
             onChange={(e) =>

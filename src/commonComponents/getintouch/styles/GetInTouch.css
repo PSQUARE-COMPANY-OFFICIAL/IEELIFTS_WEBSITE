@@ -53,6 +53,7 @@ width: 100%;
 .get_in_touch_form_container{
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .get_in_touch_form_container_up{
@@ -111,7 +112,7 @@ width: 100%;
         padding: 5rem 7.5vw;
     }
 } */
-@media (max-width: 480px){
+@media (max-width: 640px){
     .get_in_touch_sub_container{
         flex-direction: column;
         padding:  2rem 0   ;

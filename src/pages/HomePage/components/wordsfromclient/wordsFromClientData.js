@@ -1,24 +1,14 @@
 export const wordsFromClientDataa=[
     {
-        fullName: 'John 1',
-    review: 'IEE Lifts offers exceptional quality and prompt installation service. Highly recommended!', 
+        fullName: 'Dhirendra Thakur',
+    review: "The brand name IEE solely stands as a testament to the superior quality &amp; safety of the product supplied to customers. I had a hydraulic lift installed in my villa, and I was blown away by the amazing riding quality—it was quiet and smooth. The staff did a fantastic job.", 
     },
     {
-        fullName: 'John 12',
-        review: 'Reasonable pricing and good quality. Installation was done on time without any hassle.', 
+        fullName: "Harjiwan Kaur",
+        review: "I have purchased a  Lift from IEE lifts in 2019, and it has been a wonderful experience right from the initial meeting. I am happy with the highly professional and courteous way in which everything is handled. Overall, I am very much impressed by their proactive and timely service. My sincere thanks to the entire team. Keep it up, and my best wishes to everyone!", 
     },{
-        fullName: 'John 3',
-        review: 'Reasonable pricing and good quality. Installation was done on time without any hassle.', 
+        fullName: "Aditya Singh Sisodia",
+        review: "IEE lifts are highly advised because they are economically and aesthetically beneficial. Best materials, excellent personnel. Each lift has an elegant design and great functionality. Honest  advice-  Best experience ever.", 
     },
-    {
-        fullName: 'John 4',
-    review: 'IEE Lifts offers exceptional quality and prompt installation service. Highly recommended!', 
-    },
-    {
-        fullName: 'John 5',
-        review: 'Reasonable pricing and good quality. Installation was done on time without any hassle.', 
-    },{
-        fullName: 'John 6',
-        review: 'Reasonable pricing and good quality. Installation was done on time without any hassle.', 
-    },
+    
 ]

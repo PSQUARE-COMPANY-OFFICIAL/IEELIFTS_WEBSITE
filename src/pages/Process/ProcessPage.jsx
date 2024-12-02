@@ -3,6 +3,7 @@ import HeroSection from "../../commonComponents/HeroSection/HeroSection";
 import OurPatrons from "../AccomplishedWorkPage/components/ourpatrons/ourPatrons";
 import Footer from "../../commonComponents/footer/footer";
 import WordsFromClient from "../HomePage/components/wordsfromclient/wordsFromClient";
+import bannerImage from '../../assets/processBannerImage.png'
 import style from "./style.module.css";
 const data = [
   {
@@ -71,7 +72,7 @@ function ProcessPage() {
     <>
       <HeroSection
         img={
-          "https://ieelifts.com/wp-content/uploads/2023/01/process-pg-banner01.png"
+          bannerImage
         }
         title="Process"
         text="In absolute transparency, we construct bespoke lifts"

@@ -47,6 +47,12 @@
     transition: max-height 0.3s ease-in-out;
 }
 
+
+.lift_navigation{
+    color: var(--primary-color);
+    position:relative;
+}
+
 .navbar_child_center li {
     list-style: none;
     cursor: pointer;
@@ -124,14 +130,12 @@
     .navbar_container {
         padding: 0 5vw;
         background-color: rgba(0, 0, 0, 0.8);
-        /* backdrop-filter: blur(0.25rem); */
-        /* opacity: 0.8; */
+
     }
 
     .openCloseButton {
         display: flex;
         position: relative;
-        /* top: 2rem; */
         align-items: center;
         font-size: 2rem;
     }
@@ -168,12 +172,11 @@
         height: 3rem;
         width: auto;
         cursor: pointer;
-        /* padding: 5vw 0; */
+
     }
 
 
     .lifts_dropdown_container{
-        /* background: none; */
         top:1rem;
         left: 3rem;
         position: relative;

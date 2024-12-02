@@ -31,8 +31,8 @@ const Review = ({reviewData}) => {
           >
             
           {reviewData?.map((item,index)=>(
-            <SwiperSlide>
-            <div className="review_cont">
+            <SwiperSlide key={index+1}>
+            <div  className="review_cont">
               <div className="review_cont_top">
                 <div className="review_cont_name">
                   <div className="review_line"></div>
