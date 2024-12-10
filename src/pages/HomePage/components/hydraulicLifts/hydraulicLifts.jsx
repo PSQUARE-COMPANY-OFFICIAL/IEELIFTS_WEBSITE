@@ -17,7 +17,7 @@ const HydraulicLiftsHome = () => {
             further decreasing the environmental footprint. In addition, it only
             use electricity while going up and almost negligible while coming
             down.
-          </h3>
+          </h3> 
           <button className="hydraulic_lifts_left_container_vm_btn">
             VIEW MORE
           </button>

@@ -1,0 +1,180 @@
+.hydraulicLifts_advantageSection {
+    background: var(--light-theme);
+    height: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    gap: 2rem;
+
+}
+
+.hydraulicLifts_advantageSection {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.hydraulicLiftsadvantages_leftsec {
+    margin-top: 5rem;
+    width: 687px;
+    text-align: left;
+
+}
+
+.hydraulicLiftsadvantages_rightsec {
+    margin: 1rem;
+    width: 687px;
+
+}
+
+.hydraulicLiftsadvantages_rightsec {
+    margin: 1rem;
+    width: 687px;
+
+}
+
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+.imageLarge {
+    grid-row: span 2;
+
+    grid-column: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.imageSmall {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hydraulicLiftsadvantages_leftsec_heading {
+    color: white;
+    font-size: 36px;
+}
+
+.imageSmall1 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.imageSmall2 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.hydraulicLiftsadvantages_leftsec_adv {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 3rem 1rem 1rem;
+
+    align-items: center;
+}
+
+
+@media (max-width: 1024px) {
+
+    .hydraulicLiftsadvantages_leftsec,
+    .hydraulicLiftsadvantages_rightsec {
+        width: 100%;
+        margin: 1rem 0;
+        padding: 0.5rem;
+
+    }
+
+    .gridContainer {
+        grid-template-columns: 1fr;
+
+        grid-template-rows: auto;
+
+    }
+
+    .hydraulicLiftsadvantages_leftsec_heading {
+        text-align: center;
+    }
+
+
+    .imageLarge {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .imageSmall1,
+    .imageSmall2 {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .hydraulicLiftsadvantages_leftsec_adv {
+        flex-direction: column;
+
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hydraulicLifts_advantageSection {
+        flex-direction: column;
+
+    }
+
+    .hydraulicLiftsadvantages_leftsec,
+    .hydraulicLiftsadvantages_rightsec {
+        margin: 0;
+        padding: 1rem;
+
+    }
+
+
+    .gridContainer {
+        gap: 5px;
+
+    }
+
+    .hydraulicLiftsadvantages_leftsec_adv {
+        margin: 0;
+
+    }
+
+    .hydraulicLiftsadvantages_leftsec_heading {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .hydraulicLiftsadvantages_leftsec_adv {
+        padding: 0.5rem;
+
+    }
+
+    .gridContainer {
+        gap: 2px;
+
+    }
+
+    .imageLarge,
+    .imageSmall {
+        img {
+            max-width: 100%;
+
+            height: auto;
+        }
+    }
+}
