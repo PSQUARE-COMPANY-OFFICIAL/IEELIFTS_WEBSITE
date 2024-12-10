@@ -25,7 +25,13 @@ const Faq = () => {
         <h1 className='frequently_asked_question_text'>Frequently Asked Questions</h1>
         <div className='faq_lower_section'>
             {displayData?.map((item,index)=>(
-              <Accordion key={index+1} title={item.question.questionText} content={item.answer?.answerText}/>
+              <Accordion 
+                key={index+1} 
+                title={item.question.questionText}
+                content={item.answer?.answerText}
+                titleLinks={item.question?.links}
+                contentLinks={item.answer?.links}
+              />
             ))}
         </div>
       </div>

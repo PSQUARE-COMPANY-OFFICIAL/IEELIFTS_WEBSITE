@@ -1,21 +1,30 @@
 import React, { useEffect, useState } from "react";
 import "./styles/blog.css";
 import moment from "moment";
-import { useGetBlogsQuery } from "../../../../redux/rtkQuery/rtkQuery";
-import { Link } from "react-router-dom";
+import { useGetBlogByIdQuery} from "../../../../redux/rtkQuery/rtkQuery";
+import { Link, useLocation } from "react-router-dom";
+import RelatedTidings from "../../../../commonComponents/relatedTidings/relatedTidings";
 
 const Blog = () => {
-  const [blogData, setBlogData] = useState(null);
-  const { isLoading, data, error } = useGetBlogsQuery();
+  const location = useLocation();
+  const pathSegments = location.pathname.split("/");
+  const id = pathSegments[pathSegments.length - 1];
+  const [blogData, setBlogData] = useState([]);
+  const { isLoading, data, error } = useGetBlogByIdQuery(id);
+  console.log('data on blogpage :',data)
   const [date, setDate] = useState("");
-
+  const [category,setCategory]=useState("")
+  // const [relatedBlogs,setRelatedBlogs]=useState([])
   useEffect(() => {
     if (data?.data && !isLoading && !error) {
       setBlogData(data.data[0]);
       const formattedDate = moment(data.data[0].createdAt).format("MMMM Do, YYYY");
       setDate(formattedDate);
+      setCategory(blogData.blogCategory)
     }
-  }, [data, isLoading, error]);
+  }, [data, isLoading, error,category]);
+
+
 
   const getTextWithLinks = (text, links) => {
     if (!text || !links) return text;
@@ -56,21 +65,21 @@ const Blog = () => {
       <div className="blog_content">
         <div className="blog_subtitle_content">
           {blogData?.blogSubTitles?.map((item, index) => (
-            <div key={index}>
+            <div key={index+1}>
               <div className="blog_subtitle_followup_text">
                 <h1>{item.subTitle}</h1>
                 <h3>{item.subTitleFollowupText}</h3>
               </div>
               <div className="subtitle_child_content">
                 {item?.subTitleChildren?.map((subtcitem, idx) => (
-                  <div key={idx}>
+                  <div key={idx+1}>
                     <h2>{subtcitem.title}</h2>
                     {subtcitem.content?.map((contentItem, i) => (
-                      <h3 key={i}>{getTextWithLinks(contentItem.contentText, contentItem.contentLinks || [])}</h3>
+                      <h3 key={i+1}>{getTextWithLinks(contentItem.contentText, contentItem.contentLinks || [])}</h3>
                     ))}
                     <ul>
                       {subtcitem.bulletPoints?.map((bullet, i) => (
-                        <li key={i}>{bullet.bulletPointsText}</li>
+                        <li key={i+1}>{bullet.bulletPointsText}</li>
                       ))}
                     </ul>
                   </div>
@@ -84,6 +93,10 @@ const Blog = () => {
       <div className="blog_conclusion">
         <h1>Conclusion</h1>
         <p>{getTextWithLinks(blogData?.blogConclusion?.conclusionText, blogData?.blogConclusion?.blogConclusionLinks || [])}</p>
+      </div>
+
+      <div className="blogs_tidings_section">
+          <RelatedTidings category={category} id={id}/>
       </div>
     </div>
   );

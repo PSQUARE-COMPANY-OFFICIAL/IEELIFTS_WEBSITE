@@ -85,7 +85,7 @@ width: 100%;
     margin-bottom: 0.25rem;
 }
 
-.get_in_touch_form_input_box span{
+.get_in_touch_form_input_box span,.get_in_touch_form_text_area span{
     color: red;
 }
 

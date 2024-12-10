@@ -1,6 +1,7 @@
 import React from 'react'
 import './styles/HomeReusable.css'
-const Widget = ({image,title,text,altTag,backgroundImage}) => {
+import { NavLink } from 'react-router-dom'
+const Widget = ({image,title,text,altTag,backgroundImage,route}) => {
   return (
     <div className='widget_container'   >
       <img src={backgroundImage} className='widget_container_background_image' alt="" style={{}} />
@@ -13,7 +14,9 @@ const Widget = ({image,title,text,altTag,backgroundImage}) => {
           <p className='widget_text'>
             {text}
           </p>
+          <NavLink to={route}>
           <h3 className='widget_knowmore'>Know More</h3>
+          </NavLink>
       </div>
     </div>
   )

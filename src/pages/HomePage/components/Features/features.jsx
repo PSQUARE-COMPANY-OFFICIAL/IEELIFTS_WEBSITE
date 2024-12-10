@@ -15,6 +15,7 @@ const Features = () => {
               text={item.text}
               altTag={item.altTag}
               backgroundImage={item.backgroundImage}
+              route={item.route}
             />
           );
         })}

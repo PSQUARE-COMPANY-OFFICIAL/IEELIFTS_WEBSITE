@@ -108,6 +108,10 @@
     padding: .75rem 1.5rem;
 }
 
+.landing_container_download_catalogue{
+    cursor: pointer;
+}
+
 .landing_container_right{
     width: 50%;
     /* background-color: beige; */

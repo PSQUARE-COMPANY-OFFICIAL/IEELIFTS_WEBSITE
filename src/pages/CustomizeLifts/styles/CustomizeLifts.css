@@ -63,7 +63,7 @@ width: 75%;
 }
 
 select.select  option:hover{
-    background-color: rgb(94, 182, 240)
+    /* background-color: rgb(94, 182, 240) */
 }
 
 

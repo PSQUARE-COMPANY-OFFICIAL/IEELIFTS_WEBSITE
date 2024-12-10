@@ -8,7 +8,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto;
     max-width: 1375px;
   /* background-color: aquamarine; */
     margin: auto;
@@ -27,13 +26,11 @@
   color: white;
   font-weight: 400;
   margin-bottom: 1rem;
-  margin-bottom: 1rem;
 }
 
 .our_blogs_home_text {
   color: var(--light-text);
   font-weight: 400;
-  margin-bottom: 1rem;
   width: 70%;
   margin-bottom: 2rem;
 }
@@ -46,8 +43,10 @@
   display: flex;
   gap: 2rem;
   overflow: hidden;
-  width: 100%;
-  /* margin-bottom: 15rem; */
+}
+
+.our_blogs_homes_widgets_section a{
+  flex: 1;
 }
 
 @media(max-width:680px){

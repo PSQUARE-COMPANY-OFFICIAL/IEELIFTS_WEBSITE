@@ -113,19 +113,23 @@ export const ContactUsForm = () => {
               Phone Number <span>*</span>
             </label>
             <input
-              type="tel"
+              type={"tel"}
               maxLength={10}
               minLength={10}
               id="PhoneNumber"
               value={state.phoneNumber}
-              onChange={(e) =>
-                dispatch({ type: types.SET_FIELD, field: "phoneNumber", value: e.target.value.toString() })
-              }
+              onChange={(e) => {
+                const value = e.target.value.replace(/\D/g, ''); 
+                if (value.length <= 10) { 
+                  dispatch({ type: types.SET_FIELD, field: "phoneNumber", value});
+                }
+              }}
+
               required
             />
           </div>
           <div className="get_in_touch_form_input_box">
-            <label htmlFor="Subject">Subject</label>
+            <label htmlFor="Subject">Subject<span> *</span></label>
             <input
               type="text"
               id="Subject"
@@ -146,12 +150,12 @@ export const ContactUsForm = () => {
           <textarea
             id="Message"
             minLength="20"
-            style={{ width: "100%", height: "13.25rem", fontFamily: 'sans-serif', padding: '1rem', outline: 'none' }}
+            style={{ width: "100%",resize:'none', height: "13.25rem", fontFamily: 'sans-serif', padding: '1rem', outline: 'none' }}
             value={state.message}
             onChange={(e) =>
               dispatch({ type: types.SET_FIELD, field: "message", value: e.target.value })
             }
-            required
+            // required
           />
         </div>
         <button

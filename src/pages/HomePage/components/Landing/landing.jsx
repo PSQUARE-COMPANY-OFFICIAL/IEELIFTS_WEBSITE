@@ -4,7 +4,7 @@ import { FaPlay, FaPause } from "react-icons/fa";
 import VideoIeeLifts from "../../../../assets/Home/iee-lifts-video-02.mp4";
 import "./styles/Landing.css";
 import { useLocation, useNavigate } from "react-router-dom";
-
+import pdf from './../../../../assets/IEE-LIFTS-BROCHURE.pdf'
 const Landing = () => {
   const [state, setState] = useState({
     play: false,
@@ -26,6 +26,12 @@ const Landing = () => {
       play: !prevState.play, 
       zIndex: prevState.zIndex === -3 ? -1 : -3, 
     }));
+  };
+
+  const handleDownloadClick = () => {
+    const pdfPath = pdf; 
+    window.open(pdfPath, '_blank');
+    navigate('/');
   };
 
 
@@ -56,7 +62,7 @@ const Landing = () => {
             ENHANCE MOBILITY AND ADD VALUE TO YOUR PROPERTY
           </h3>
           <div className="landing_container_left_download_customize_container">
-            <div>DOWNLOAD CATALOG </div>
+            <div className="landing_container_download_catalogue" onClick={()=>handleDownloadClick()} >DOWNLOAD CATALOG </div>
             <div onClick={()=>navigate('/customize-lifts')}>CUSTOMISE YOUR LIFT</div>
           </div>
         </div>

@@ -18,6 +18,8 @@ import IndustrialLifts from "../../pages/Lifts/IndustrialLifts/industrialLifts.j
 import CustomizeLifts from "../../pages/CustomizeLifts/customizeLifts.jsx";
 import BlogPageById from "../../pages/blogsPage/blogsPageById.jsx";
 import BlogPage from "../../pages/blogsPage/blogPage.jsx";
+import CategoryBlogPage from "../../pages/blogsPage/categoryBlogPage.jsx";
+
 
 
 const Routing = () => {
@@ -43,8 +45,12 @@ const Routing = () => {
 
           <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
           <Route path="/terms-and-conditions" element={<TernAndCondition/>}/>
-          <Route path="/blog" element={<BlogPage/>}/>
-          <Route path="/blog/:id" element={<BlogPageById/>}/>
+          <Route path="/blogs" element={<BlogPage/>}/>
+
+
+          <Route path="/blogs/:id" element={<BlogPageById/>}/>
+          {/* <Route path="/blog/:id" element={<BlogDetail/>}/> */}
+          <Route path="/category/:category" element={<CategoryBlogPage />} />
           <Route path="/experience-center" element={<Center/>}/>
           
         </Route>

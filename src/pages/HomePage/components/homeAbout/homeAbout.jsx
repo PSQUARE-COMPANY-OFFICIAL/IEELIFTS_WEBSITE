@@ -20,8 +20,8 @@ const HomeAbout = () => {
             family-driven business, we strive to excel, grow, and provide the
             best lift solutions to our customers. Our global vision drives us to
             expand our reach and make a mark in the vertical transportation
-            industry. As one of the leading <Link>Residential lifts</Link>, <Link>Commercial
-            lifts</Link>, <Link>Hospital lifts</Link>, <Link>Hotel lifts</Link > and <Link style={{marginRight:'0.25rem'}}>Industrial lifts</Link> 
+            industry. As one of the leading <Link to={'/residential-lifts/'}>Residential lifts</Link>, <Link to={'/commercial-lifts/'}>Commercial
+            lifts</Link>, <Link to={'/hospital-lifts/'}>Hospital lifts</Link>, <Link to={'/hotel-lifts/'}>Hotel lifts</Link > and <Link to={'/industrial-lifts/'} style={{marginRight:'0.25rem'}}>Industrial lifts</Link> 
             manufacturers headquartered in the rapidly growing Tricity. Our
             company has earned a reputation for delivering quality and
             affordable lift products that excel in every aspect.

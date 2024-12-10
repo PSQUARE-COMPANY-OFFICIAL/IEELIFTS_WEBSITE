@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './styles/Ourblogs.css'
 import { blogsData, homeOurBlogsData } from "./styles/OurBlogData";
 import BlogWidget from "../reusableComponents/blogWidget";
 import { NavLink } from "react-router-dom";
+import { useGetLastFewBlogsQuery } from "../../../../redux/rtkQuery/rtkQuery";
+import moment from "moment";
 
 
 const OurBlogs = () => {
+  const [blogData, setBlogData] = useState(null);
+    const { isLoading, data, error } = useGetLastFewBlogsQuery(3);
+    const displayData=blogData??homeOurBlogsData
+    console.log('console logging last 3 blogs:',data);
+    
+    const [date, setDate] = useState("");
+    
+  
+    useEffect(() => {
+      if (data?.data && !isLoading && !error) {
+        setBlogData(data.data);
+        const formattedDate = moment(data.data[0].createdAt).format("MMMM Do, YYYY");
+        setDate(formattedDate);
+      }
+    }, [data, isLoading, error]);
   return (
     <div className="our_blogs_home_container">
       <div className="our_blogs_home_sub_container">
@@ -19,8 +36,8 @@ const OurBlogs = () => {
         </h3>
         
         <div className="our_blogs_homes_widgets_section">
-            {homeOurBlogsData.map((item,index)=>(
-               <NavLink style={{textDecoration:'none'}} key={index+1} to={'/blog/241'}><BlogWidget   image={item.image} title={item.title} date={item.date} alt='Blog Image'/></NavLink>
+            {displayData.map((item,index)=>(
+               <NavLink style={{textDecoration:'none'}} key={index+1} to={`/blogs/${item._id}`}><BlogWidget   image={item.blogImage} title={item.blogTitle} date={item.createdAt} alt='Blog Image'/></NavLink>
             ))}
         </div>
       </div>

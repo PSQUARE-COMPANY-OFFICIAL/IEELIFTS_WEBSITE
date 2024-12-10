@@ -1,10 +1,14 @@
-import React, { useEffect, useReducer } from 'react'
+import React, { useEffect, useReducer, useState } from 'react'
 import HeroSection from '../../commonComponents/HeroSection/HeroSection'
 import bannerImage from '../../assets/contactPage/contactBanner.jpg'
 import Footer from '../../commonComponents/footer/footer'
 import './styles/CustomizeLifts.css'
 import { useCustomizeLiftContactusFormApiMutation } from '../../redux/rtkQuery/rtkQuery'
+import Toast from '../../commonComponents/ToastComponent/toast'
 const CustomizeLifts = () => {
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState('');
+  const [toastType, setToastType] = useState('');
   const [customizedLiftContactusForm, { isLoading }] = useCustomizeLiftContactusFormApiMutation();
   const types = {
     SET_FIELD: "SET_FIELD",
@@ -33,9 +37,24 @@ const CustomizeLifts = () => {
     try {
       await customizedLiftContactusForm(state).unwrap();
       console.log("Form submitted successfully");
+      setToastMessage("Form submitted successfully!");
       dispatch({ type: types.RESET }); 
+      setToastType("success");
     } catch (error) {
       console.error("Form submission failed", error);
+
+      if (error?.status === 500) {
+        setToastMessage("Something went wrong on the server!");
+        setToastType("error");
+      } else if (error?.status === 0) {
+        setToastMessage("No internet connection!");
+        setToastType("error");
+      } else {
+        setToastMessage("Something went wrong!");
+        setToastType("error");
+      }
+    } finally {
+      setShowToast(true);
     }
  };
 
@@ -83,14 +102,20 @@ const CustomizeLifts = () => {
               Phone Number <span>*</span>
             </label>
             <input
-              type="tel"
+              type={"tel"}
               minLength={10}
               maxLength={10}
+              pattern="\d{10}"
               id="PhoneNumber"
               value={state.phoneNumber}
-              onChange={(e) =>
-                dispatch({ type: types.SET_FIELD, field: "phoneNumber", value:e.target.value.toString()})
-              }
+              onChange={(e) => {
+                const value = e.target.value.replace(/\D/g, ''); 
+                if (value.length <= 10) { 
+                  dispatch({ type: types.SET_FIELD, field: "phoneNumber", value });
+                }
+              }}
+              
+
               required
             />
           </div>
@@ -161,7 +186,7 @@ const CustomizeLifts = () => {
 
         <div className="get_in_touch_form_text_area">
           <label style={{ marginBottom: "0.25rem" }} htmlFor="Message">
-            Your Message
+            Your Message 
           </label>
           <textarea
             id="Message"
@@ -172,7 +197,7 @@ const CustomizeLifts = () => {
             onChange={(e) =>
               dispatch({ type: types.SET_FIELD, field: "message", value: e.target.value })
             }
-            required
+            
           />
         </div>
         <button
@@ -183,6 +208,13 @@ const CustomizeLifts = () => {
         >
           {isLoading ? "Submitting..." : "SUBMIT"}
         </button>
+        {showToast && (
+        <Toast
+          message={toastMessage}
+          type={toastType}
+          onClose={() => setShowToast(false)}
+        />
+      )}
       </form>
             </div>
         </div>

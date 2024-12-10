@@ -1,16 +1,20 @@
 import React, {  useState } from "react";
 import { BsPlayCircle } from "react-icons/bs";
 import { FaTimes } from "react-icons/fa";
+import { MdClose } from "react-icons/md"; //
 import "./styles/HomeReusable.css";
 
 const FounderDetails = ({ name, position, text, image ,video}) => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  // const [isPlaying, setIsPlaying] = useState(false);
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+
   const buttonClickHandler = () => {
-    setIsPlaying(true); 
+    setIsOverlayOpen(true);
   };
-  const closeOverlay = () => {
-    setIsPlaying(false); 
-  };
+
+  const closeOverlayHandler = () => {
+    setIsOverlayOpen(false);
+  }
 
   return (
     <div className="founder_details_container">
@@ -24,21 +28,17 @@ const FounderDetails = ({ name, position, text, image ,video}) => {
         </div>
       </div>
 
-      {isPlaying && (
+      {isOverlayOpen && (
         <div className="video_overlay">
-          <div className="video_content">
-            <button className="close_button" onClick={()=>closeOverlay()}>
-              <FaTimes style={{ fontSize: "2rem", color: "white" }} />
-            </button>
+          <div className="video_overlay_content">
+            <MdClose
+              className="close_button"
+              onClick={closeOverlayHandler}
+            />
             <iframe
-              style={{
-                width: "90%",
-                objectFit: "cover",
-              }}
-              width="560"
-              height="800"
-              src={video??''}
-              title="YouTube video player"
+              className="video_overlay_vid_tag"
+              src={video || ""}
+              title="Founder Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen

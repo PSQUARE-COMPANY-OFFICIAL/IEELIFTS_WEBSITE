@@ -16,7 +16,8 @@ export const widgetData=[
         title:'Rider Safety Features',
         text:'IEE Lifts Private Limited, a renowned lift manufacturers in Mohali, we prioritise rider safety, incorporating cutting-edge safety features into the design and construction of our elevators.',
         altTag:'Safety Image',
-        backgroundImage:featureImage01
+        backgroundImage:featureImage01,
+        route:'/safety/'
 
     },
     {
@@ -24,7 +25,8 @@ export const widgetData=[
         title:'Eco-Friendly Innovation',
         text:'As one of the leading elevator manufacturers, we take environmental responsibility seriously. Our lifts are designed to consume significantly less energy, promoting green vertical mobility.',
         altTag:'Eco-Friendly Image',
-        backgroundImage:featureImage02
+        backgroundImage:featureImage02,
+        route:'/contact/'
 
     },
     {
@@ -32,7 +34,8 @@ export const widgetData=[
         title:'After Sales Service',
         text:'We are not just lift manufacturers but your reliable lift company offering comprehensive after-sales services with free maintenance sessions.',
         altTag:'24X7 Image',
-        backgroundImage:featureImage03
+        backgroundImage:featureImage03,
+        route:'/maintenance/'
 
     },
 ]
