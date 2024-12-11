@@ -1,7 +1,9 @@
 import React from "react";
 import hydraulicImage from "../../../../assets/homepage/hydraulicLifts.jpg";
 import "./styles/OurProject.css";
+import { useNavigate } from "react-router-dom";
 const OurProject = () => {
+  const navigate=useNavigate()
   return (
     <div className="our_projects_container">
       <div className="our_projects_sub_container">
@@ -30,7 +32,7 @@ const OurProject = () => {
               they are world leaders in hydraulic solutions and the technology
               they have developed is way ahead of anything in competition.
             </p>
-            <button className="our_projects_bottom_vm_button">VIEW MORE</button>
+            <button className="our_projects_bottom_vm_button" onClick={()=>navigate('/hydraulic-lifts')} >VIEW MORE</button>
           </div>
           <div className="our_projects_bottom_right">
             <img  src={hydraulicImage}></img>

@@ -32,7 +32,7 @@ export const blogsData = [
     {
         _id: "1",
         blogImage: image1,
-        title: "A Comprehensive Guide For Customised Home Lifts",
+        blogTitle: "A Comprehensive Guide For Customised Home Lifts",
         date: "May 30,2024",
     },
     {

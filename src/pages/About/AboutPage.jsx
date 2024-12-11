@@ -4,7 +4,7 @@ import OurPatrons from "../AccomplishedWorkPage/components/ourpatrons/ourPatrons
 import Footer from "../../commonComponents/footer/footer";
 import Accredentials from "../HomePage/components/Accredentials/accredentials";
 import bannerImage from "../../assets/aboutBannerImage.jpg";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { achievementWidgetData } from "../HomePage/components/reusableComponents/widgetData";
 import AchievementWidget from "../HomePage/components/reusableComponents/achievementWidget";
 import pdf from "../../assets/IEE-LIFTS-BROCHURE.pdf";
@@ -18,6 +18,8 @@ function AboutPage() {
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, []);
+
+  
 
   const handleDownloadClick = () => {
     const pdfPath = pdf;
@@ -178,7 +180,7 @@ function AboutPage() {
                 </p>
 
                 <div className="logo_linkedin" style={{height:'3rem',width:'3rem'}}>
-                <TiSocialLinkedin style={{fontSize:'2rem',color:'white'}}/>
+                <NavLink target="_blank" to={'https://www.linkedin.com/in/rajinder-mohan-37b2921a6?original_referer=https%3A%2F%2Fieelifts.com%2F'}><TiSocialLinkedin style={{fontSize:'2rem',color:'white'}}/></NavLink>
                 </div>
               </div>
             </div>

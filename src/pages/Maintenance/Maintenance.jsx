@@ -5,13 +5,22 @@ import Footer from "../../commonComponents/footer/footer";
 import WordsFromClient from "../HomePage/components/wordsfromclient/wordsFromClient";
 import bannerImage from '../../assets/maintenanceBannerImage.jpeg'
 import style from "./style.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FaCheck } from "react-icons/fa";
 import { MdOutlineFileDownload } from "react-icons/md";
+import pdf from './../../assets/IEE-LIFTS-BROCHURE.pdf'
 function Maintenance() {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  const handleDownloadClick = () => {
+    const pdfPath = pdf; 
+    window.open(pdfPath, '_blank');
+    navigate('/');
+  };
+
+  const navigate=useNavigate()
   return (
     <>
       <HeroSection
@@ -44,9 +53,9 @@ function Maintenance() {
             <div className="navbar_child_right">
               <NavLink
                 style={{ textDecoration: "none" }}
-                to={"/customise-lifts"}
+                to={"/contact"}
               >
-                <div className="navbar_child_right_cl_button">GET IN TOUCH</div>
+                <div className="navbar_child_right_cl_button" >GET IN TOUCH</div>
               </NavLink>
             </div>
           </div>
@@ -173,7 +182,7 @@ function Maintenance() {
                 <div className="navbar_child_right">
                   <NavLink
                     style={{ textDecoration: "none" }}
-                    to={"/customise-lifts"}
+                    to={"/contact"}
                   >
                     <div className="navbar_child_right_cl_button">
                       Rs. 32,000/Yearly
@@ -183,7 +192,7 @@ function Maintenance() {
                 <div className="navbar_child_right">
                   <NavLink
                     style={{ textDecoration: "none" }}
-                    to={"/customise-lifts"}
+                    to={"/contact"}
                   >
                     <div className="navbar_child_right_cl_button">
                       Enquire Now
@@ -298,7 +307,7 @@ function Maintenance() {
                 <div className="navbar_child_right">
                   <NavLink
                     style={{ textDecoration: "none" }}
-                    to={"/customise-lifts"}
+                    to={"/contact"}
                   >
                     <div className="navbar_child_right_cl_button">
                       Rs. 42,000/Yearly
@@ -308,7 +317,7 @@ function Maintenance() {
                 <div className="navbar_child_right">
                   <NavLink
                     style={{ textDecoration: "none" }}
-                    to={"/customise-lifts"}
+                    to={"/contact"}
                   >
                     <div className="navbar_child_right_cl_button">
                       Enquire Now
@@ -432,7 +441,7 @@ function Maintenance() {
                 <div className="navbar_child_right">
                   <NavLink
                     style={{ textDecoration: "none" }}
-                    to={"/customise-lifts"}
+                    to={"/contact"}
                   >
                     <div className="navbar_child_right_cl_button">
                       Rs. 52,000/Yearly
@@ -442,7 +451,7 @@ function Maintenance() {
                 <div className="navbar_child_right">
                   <NavLink
                     style={{ textDecoration: "none" }}
-                    to={"/customise-lifts"}
+                    to={"/contact"}
                   >
                     <div className="navbar_child_right_cl_button">
                       Enquire Now
@@ -460,8 +469,8 @@ function Maintenance() {
               gap: "10px",
             }}
           >
-            <MdOutlineFileDownload
-              style={{ fontSize: "30px", color: "var(--primary-color)" }}
+            <MdOutlineFileDownload onClick={()=>handleDownloadClick()}
+              style={{ fontSize: "30px", color: "var(--primary-color)",cursor:'pointer' }}
             />
             <p className={`${style.text}`} style={{ color: "var(--white)" }}>
               Maintenance & Repair Services Brochure (PDF, 2 MB)

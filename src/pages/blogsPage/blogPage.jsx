@@ -45,19 +45,19 @@ const BlogPage = () => {
           <div className="blog_page_blog_and_categories">
             <div className="blog_page_blog_and_categories_left">
             {displayData.map((item,index)=>(
-                <NavLink style={{textDecoration:'none'}} key={index+1} to={`/blogs/${item._id}`}> <BlogWidget key={index+1} image={item.blogImage} title={item.blogTitle} date={item.createdAt} alt='Blog Image'/></NavLink>
+                <NavLink style={{textDecoration:'none'}} key={index+1} to={`/${item.blogTitle?.toLowerCase().replace(/\s+/g,'-')}/`} state={{id:item._id}}> <BlogWidget key={index+1} image={item.blogImage} title={item.blogTitle} date={item.createdAt} alt='Blog Image'/></NavLink>
             ))}
             </div>
             <div className="blog_page_blog_and_categories_right">
                 <h2>CATEGORIES</h2>
                 <div style={{height:'1px', backgroundColor:'var(--primary-color)',marginBottom:'1.5rem'}}></div>
-                <NavLink to={'/category/residential-lifts'} className={({isActive})=>isActive?'active':'inactive'}  >Residential lift</NavLink>
-                <NavLink to={'/category/commercial-lifts'} className={({isActive})=>isActive?'active':'inactive'} >Commercial lift</NavLink>
-                <NavLink to={'/category/hospital-lifts'} className={({isActive})=>isActive?'active':'inactive'}>Hospital lift</NavLink>
-                <NavLink to={'/category/hotel-lifts'} className={({isActive})=>isActive?'active':'inactive'}>Hotel lift</NavLink>
-                <NavLink to={'/category/industrial-lifts'} className={({isActive})=>isActive?'active':'inactive'}>Industrial lift</NavLink>
-                <NavLink to={'/category/events-and-exhibition'} className={({isActive})=>isActive?'active':'inactive'}>Events &  Exhibition</NavLink>
-                <NavLink to={'/category/lifts-and-maintenance'} className={({isActive})=>isActive?'active':'inactive'}>Lift Maintenance</NavLink>
+                <NavLink to={'/category/residential/'} className={({isActive})=>isActive?'active':'inactive'}  >Residential lift</NavLink>
+                <NavLink to={'/category/commercial/'} className={({isActive})=>isActive?'active':'inactive'} >Commercial lift</NavLink>
+                <NavLink to={'/category/hospital-lifts/'} className={({isActive})=>isActive?'active':'inactive'}>Hospital lift</NavLink>
+                <NavLink to={'/category/hotel-lifts/'} className={({isActive})=>isActive?'active':'inactive'}>Hotel lift</NavLink>
+                <NavLink to={'/category/industrial-lifts/'} className={({isActive})=>isActive?'active':'inactive'}>Industrial lift</NavLink>
+                <NavLink to={'/category/events-and-exhibition/'} className={({isActive})=>isActive?'active':'inactive'}>Events &  Exhibition</NavLink>
+                <NavLink to={'/category/lifts-and-maintenance/'} className={({isActive})=>isActive?'active':'inactive'}>Lift Maintenance</NavLink>
             </div>
           </div>
         </div>

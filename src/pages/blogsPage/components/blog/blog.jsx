@@ -8,7 +8,7 @@ import RelatedTidings from "../../../../commonComponents/relatedTidings/relatedT
 const Blog = () => {
   const location = useLocation();
   const pathSegments = location.pathname.split("/");
-  const id = pathSegments[pathSegments.length - 1];
+  const id = location.state.id;
   const [blogData, setBlogData] = useState([]);
   const { isLoading, data, error } = useGetBlogByIdQuery(id);
   console.log('data on blogpage :',data)
@@ -52,6 +52,8 @@ const Blog = () => {
     
     return parts;
   };
+
+  if(!id) <h1>Coming soon ...</h1>
 
   return (
     <div className="blog_container">

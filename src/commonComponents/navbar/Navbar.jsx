@@ -77,7 +77,7 @@ const Navbar = () => {
 
         <div className={`navbar_child_center ${isOpen.navigation ? "active" : "close"}`}>
           <li>
-            <NavLink to={"/about"} className={({ isActive }) => (isActive ? "active" : "inactive")}>
+            <NavLink to={"/about/"} className={({ isActive }) => (isActive ? "active" : "inactive")}>
               ABOUT
             </NavLink>
           </li>
@@ -102,22 +102,22 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to={"/accomplished-work"} className={({ isActive }) => (isActive ? "active" : "inactive")}>
+            <NavLink to={"/accomplished-work/"} className={({ isActive }) => (isActive ? "active" : "inactive")}>
               ACCOMPLISHED WORK
             </NavLink>
           </li>
           <li>
-            <NavLink to={"/process"} className={({ isActive }) => (isActive ? "active" : "inactive")}>
+            <NavLink to={"/process/"} className={({ isActive }) => (isActive ? "active" : "inactive")}>
               PROCESS
             </NavLink>
           </li>
           <li>
-            <NavLink to={"/safety"} className={({ isActive }) => (isActive ? "active" : "inactive")}>
+            <NavLink to={"/safety/"} className={({ isActive }) => (isActive ? "active" : "inactive")}>
               SAFETY
             </NavLink>
           </li>
           <li>
-            <NavLink to={"/contact"} className={({ isActive }) => (isActive ? "active" : "inactive")}>
+            <NavLink to={"/contact/"} className={({ isActive }) => (isActive ? "active" : "inactive")}>
               CONTACT
             </NavLink>
           </li>
@@ -125,7 +125,7 @@ const Navbar = () => {
 
         {/* Customize Lifts Button */}
         <div className="navbar_child_right">
-          <NavLink to={"/customize-lifts"}>
+          <NavLink to={"/customize-lifts/"}>
             <div className="navbar_child_right_cl_button">CUSTOMIZE LIFTS</div>
           </NavLink>
         </div>

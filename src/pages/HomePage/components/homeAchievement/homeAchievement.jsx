@@ -5,7 +5,7 @@ import ieeLiftsVideo from "../../../../assets/Home/iee-lifts-video-02.mp4";
 import ieeLiftsImage from "../../../../assets/Home/achievementsVideoImage.jpg";
 import "./styles/HomeAchievement.css";
 import { BsPlayCircle } from "react-icons/bs";
-import { MdClose } from "react-icons/md"; // Close icon
+import { MdClose } from "react-icons/md"; 
 
 const HomeAchievement = () => {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);

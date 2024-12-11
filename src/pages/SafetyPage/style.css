@@ -1,0 +1,89 @@
+.video_overlay_vid_tag{
+    width: 90%; 
+    height: 90vh;
+    /* height: auto; */
+    border-radius: 0.5rem; 
+}
+
+.play_circle_home_achievement{
+   
+        font-size: 3rem;
+        color: white;
+        cursor: pointer;
+        z-index: 3;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        
+
+}
+
+
+
+  
+  .video_overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .video_overlay_content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+
+  
+  .close_button {
+    position: absolute;
+    right: 1rem;
+    z-index: 10;
+    font-size:2rem;
+     color: white;
+      cursor: pointer;
+  }
+  
+
+@media(max-width:480px){
+    
+}
+
+@media (max-width:640px) {
+
+    .home_achievement_sub_container{
+        padding: 2rem 0;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .video_overlay_vid_tag{
+        height: 50vh;
+        /* height: auto; */
+    }
+
+    .video_overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        height: 100vh;
+    
+    }
+
+    .close_button {
+        position: absolute;
+        top: -3rem;
+        right: .75rem;
+    
+        z-index: 10;
+      }
+}

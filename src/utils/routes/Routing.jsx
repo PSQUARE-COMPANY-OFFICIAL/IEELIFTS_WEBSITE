@@ -19,6 +19,7 @@ import CustomizeLifts from "../../pages/CustomizeLifts/customizeLifts.jsx";
 import BlogPageById from "../../pages/blogsPage/blogsPageById.jsx";
 import BlogPage from "../../pages/blogsPage/blogPage.jsx";
 import CategoryBlogPage from "../../pages/blogsPage/categoryBlogPage.jsx";
+import ExperienceCenter from "../../pages/ExperienceCenter/experienceCenter.jsx";
 
 
 
@@ -27,7 +28,7 @@ const Routing = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/" element={<Home/>}/>
+          <Route index element={<Home/>}/>
           <Route path="/about" element={<AboutPage/>}/>
 
           <Route path="/commercial-lifts" element={<CommercialLifts/>}/>
@@ -48,10 +49,10 @@ const Routing = () => {
           <Route path="/blogs" element={<BlogPage/>}/>
 
 
-          <Route path="/blogs/:id" element={<BlogPageById/>}/>
+          <Route path="/:id" element={<BlogPageById/>}/>
           {/* <Route path="/blog/:id" element={<BlogDetail/>}/> */}
           <Route path="/category/:category" element={<CategoryBlogPage />} />
-          <Route path="/experience-center" element={<Center/>}/>
+          <Route path="/experience-center" element={<ExperienceCenter/>}/>
           
         </Route>
         <Route path="*" element={<h1>Page not found</h1>} />

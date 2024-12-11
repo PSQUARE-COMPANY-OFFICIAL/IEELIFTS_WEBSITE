@@ -48,14 +48,14 @@
 .heddingText {
   text-align: left;
   color: var(--primary-color);
-  font-size: 18px;
+  font-size: 1.1rem;
 }
 .hedding {
   font-family: "Barlow", Sans-serif;
   font-weight: 400;
   text-transform: capitalize;
   text-align: left;
-  font-size: 36px;
+  font-size: 2.2rem;
   color: var(--white);
 }
 .card{
@@ -70,6 +70,18 @@
   max-width: 540px;
   flex: 1;
   min-width: 400px;
+}
+
+@media (max-width: 640px) {
+  .heddingText {
+    
+    font-size: 0.9rem;
+  }
+  .hedding {
+    
+    font-size: 1.5rem;
+    
+  }
 }
 
 @media (max-width: 1480px) {

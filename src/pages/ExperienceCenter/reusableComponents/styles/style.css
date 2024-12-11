@@ -1,0 +1,25 @@
+.exp_widget_container{
+    padding: 1.25rem;
+    background-color: var(--light-theme-one);
+    display: flex;
+     flex-direction: column;
+     gap: 1rem;
+     border-radius: 0.2rem;
+     
+    }
+    
+    .exp_widget_heading{
+     font-size: 1.7rem;
+     color: var(--primary-color);
+     text-align: left;
+     margin-bottom: 0.5rem;
+     font-weight: 400;
+    }
+    
+    .exp_widget_para{
+     font-size: 1.1rem;
+     color: var(--light-text);
+     text-align: left;
+     font-weight: 400;
+     /* margin-bottom: 1.5rem; */
+    }

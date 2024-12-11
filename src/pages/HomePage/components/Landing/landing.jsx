@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import homePageImage from "../../../../assets/Home/homePageImage.jpg";
 import { FaPlay, FaPause } from "react-icons/fa";
-import VideoIeeLifts from "../../../../assets/Home/iee-lifts-video-02.mp4";
 import "./styles/Landing.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import pdf from './../../../../assets/IEE-LIFTS-BROCHURE.pdf'

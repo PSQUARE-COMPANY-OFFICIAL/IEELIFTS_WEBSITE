@@ -125,7 +125,7 @@ const Footer = () => {
             <li>
               <NavLink
                 style={{ background: "none", textDecoration: "none" }}
-                to={"/about"}
+                to={"/about/"}
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
               >
                 About
@@ -134,7 +134,7 @@ const Footer = () => {
             <li>
               <NavLink
                 style={{ background: "none", textDecoration: "none" }}
-                to={"/maintenance"}
+                to={"/maintenance/"}
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
               >
                 Maintenance
@@ -143,7 +143,7 @@ const Footer = () => {
             <li>
               <NavLink
                 style={{ background: "none", textDecoration: "none" }}
-                to={"/accomplished-work"}
+                to={"/accomplished-work/"}
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
               >
                 Accomplished Work
@@ -152,7 +152,7 @@ const Footer = () => {
             <li>
               <NavLink
                 style={{ background: "none", textDecoration: "none" }}
-                to={"/process"}
+                to={"/process/"}
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
               >
                 Process
@@ -167,7 +167,7 @@ const Footer = () => {
             <li>
               <NavLink
                 style={{ background: "none", textDecoration: "none" }}
-                to={"/contact"}
+                to={"/contact/"}
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
               >
                 Contact
@@ -176,7 +176,7 @@ const Footer = () => {
             <li>
               <NavLink
                 style={{ background: "none", textDecoration: "none" }}
-                to={"/blogs"}
+                to={"/blogs/"}
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
               >
                 Blogs
@@ -185,7 +185,7 @@ const Footer = () => {
             <li>
               <NavLink
                 style={{ background: "none", textDecoration: "none" }}
-                to={"/experience-center"}
+                to={"/experience-center/"}
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
               >
                 Experience Center
@@ -194,7 +194,7 @@ const Footer = () => {
             <li>
               <NavLink
                 style={{ background: "none", textDecoration: "none" }}
-                to={"/privacy-policy"}
+                to={"/privacy-policy/"}
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
               >
                 Privacy Policy
@@ -203,7 +203,7 @@ const Footer = () => {
             <li>
               <NavLink
                 style={{ background: "none", textDecoration: "none" }}
-                to={"/terms-and-conditions"}
+                to={"/terms-and-conditions/"}
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
               >
                 Terms And Conditions

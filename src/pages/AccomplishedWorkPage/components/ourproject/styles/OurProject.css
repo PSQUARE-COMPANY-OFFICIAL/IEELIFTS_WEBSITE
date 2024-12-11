@@ -63,6 +63,7 @@
     width: 10rem;
     padding:1rem;
     border: none;
+    cursor: pointer;
 }
 
 .our_projects_top{

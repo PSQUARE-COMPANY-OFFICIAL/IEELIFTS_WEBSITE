@@ -1,16 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import HeroSection from "../../commonComponents/HeroSection/HeroSection";
 import style from "./style.module.css";
+import './style.css'
 import Footer from "../../commonComponents/footer/footer";
 import OurPatrons from "../AccomplishedWorkPage/components/ourpatrons/ourPatrons";
-import AuthorisedPartners from "../HomePage/components/abhishekAuthorisedPartners/authorisedPartners";
 import bannerImage from '../../assets/safetyBannerImage.jpg'
+import ieeLiftsVideo from "../../assets/Home/iee-lifts-video-02.mp4";
+import { BsPlayCircle } from "react-icons/bs";
+import { MdClose } from "react-icons/md"; 
 import img6 from "./safety-icon-06.png";
 import img1 from "./safety-icon-01.png";
 import img2 from "./safety-icon-02.png";
 import img3 from "./safety-icon-03.png";
 import img4 from "./safety-icon-04.png";
 import img5 from "./safety-icon-05.png";
+import AuthorisedPartners from "../HomePage/components/authorisedPartners/authorisedPartners";
 const card = [
   {
     img: img1,
@@ -41,6 +45,15 @@ const card = [
 
 
 function Safety() {
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+
+  const buttonClickHandler = () => {
+    setIsOverlayOpen(true);
+  };
+
+  const closeOverlayHandler = () => {
+    setIsOverlayOpen(false);
+  };
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -96,6 +109,26 @@ function Safety() {
               style={{ width: "100%" }}
               alt=""
             />
+            {isOverlayOpen && (
+              <div className="video_overlay">
+                <div className="video_overlay_content">
+                  <MdClose
+                    className="close_button"
+                    onClick={closeOverlayHandler}
+                    style={{ }}
+                  />
+                  <video 
+                  className="video_overlay_vid_tag"
+                    src={ieeLiftsVideo}
+                    controls
+                    autoPlay
+                    style={{objectFit:'cover' }}
+                    controlsList="nodownload"
+                    muted
+                  ></video>
+                </div>
+              </div>
+            )}
           </div>
         </div>
         <div
@@ -306,10 +339,15 @@ function Safety() {
           className={`${style.innerContainer} `} style={{position:"relative"}}
         >
           <img src="https://ieelifts.com/wp-content/uploads/2023/01/safety-main-img04.jpg" style={{width:"100%", aspectRatio:"16/9"}} alt="" />
+          <BsPlayCircle
+            onClick={()=>buttonClickHandler()}
+            style={{position:'absolute'}}
+            className="play_circle_home_achievement"
+          />
          {/*  */}
         </div>
       </div>
-      <AuthorisedPartners />
+      <AuthorisedPartners/>
       <OurPatrons />
       <Footer />
     </>
