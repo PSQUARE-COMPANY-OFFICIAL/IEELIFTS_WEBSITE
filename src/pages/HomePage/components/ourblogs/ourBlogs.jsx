@@ -37,7 +37,7 @@ const OurBlogs = () => {
         
         <div className="our_blogs_homes_widgets_section">
             {displayData.map((item,index)=>(
-               <NavLink style={{textDecoration:'none'}} key={index+1} to={`/${item.blogTitle?.toLowerCase().replace(/\s+/g,'-')}/`} state={{id:item.blogTitle}}><BlogWidget   image={item.blogImage} title={item.blogTitle} date={item.createdAt} alt='Blog Image'/></NavLink>
+               <NavLink style={{textDecoration:'none'}} key={index+1} to={`/${item.blogTitle?.toLowerCase().replace(/\s+/g,'-')}/`} state={{id:item._id}}><BlogWidget   image={item.blogImage} title={item.blogTitle} date={item.createdAt} alt='Blog Image'/></NavLink>
             ))}
         </div>
       </div>

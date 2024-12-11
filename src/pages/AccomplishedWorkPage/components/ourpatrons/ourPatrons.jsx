@@ -16,7 +16,7 @@ const OurPatrons = () => {
       <div className="our_patrons_sub_container">
             <div className='our_patrons_top'>
                 <h1 className='our_patrons_top_title'>Our Patrons</h1>
-                <p className='our_patrons_top_text'>We extend our heartfelt gratitude to each and every one of our clients who has entrusted us with their safety. Your trust motivates us to continue delivering the best lift solutions.</p>
+                <p className='our_patrons_top_text'>We sincerely appreciate each and every one of our clients who has trusted us with their safety.</p>
             </div>
             <div className='our_patrons_bottom'>
                 <div className='our_patrons_bottom_img_box'><img src={allenImage} alt="" /></div>

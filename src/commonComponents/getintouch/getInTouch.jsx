@@ -3,6 +3,8 @@ import liftButtonImage from "../../assets/liftButtonImage.jpg";
 import "./styles/GetInTouch.css";
 import { useContactusFormApiMutation } from "../../redux/rtkQuery/rtkQuery";
 import Toast from "../ToastComponent/toast";
+import { useNavigate } from "react-router-dom";
+
 const GetInTouch = () => {
   return (
     <div className="get_in_touch_container">
@@ -10,7 +12,7 @@ const GetInTouch = () => {
         <div className="get_in_touch_left">
           <img src={liftButtonImage} alt="" />
         </div>
-        <ContactUsForm/>
+        <ContactUsForm />
       </div>
     </div>
   );
@@ -22,8 +24,9 @@ export const ContactUsForm = () => {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
   const [toastType, setToastType] = useState('');
-
+  const navigate = useNavigate();
   const [contactusForm, { isLoading }] = useContactusFormApiMutation();
+  
   const types = {
     SET_FIELD: "SET_FIELD",
     RESET: "RESET",
@@ -49,11 +52,11 @@ export const ContactUsForm = () => {
     try {
       await contactusForm(state).unwrap();
       setToastMessage("Form submitted successfully!");
-      dispatch({ type: types.RESET }); 
+      dispatch({ type: types.RESET });
       setToastType("success");
+      navigate("/contact/thank-you");
     } catch (error) {
       console.error("Form submission failed", error);
-
       if (error?.status === 500) {
         setToastMessage("Something went wrong on the server!");
         setToastType("error");
@@ -69,6 +72,30 @@ export const ContactUsForm = () => {
     }
   };
 
+  // Email validation function
+  const validateEmail = (email) => {
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[cC][oO][mM]$/;
+    return regex.test(email);
+  };
+
+  const handleEmailChange = (e) => {
+    const emailValue = e.target.value;
+    dispatch({ type: types.SET_FIELD, field: "email", value: emailValue });
+  
+    // Email validation logic
+    if (validateEmail(emailValue)) {
+      e.target.setCustomValidity(""); 
+      // setToastMessage('Valid Email Address');
+      // setToastType('success');  
+    } else {
+      e.target.setCustomValidity('Please enter a valid email address ending with @gmail.com');
+      
+      // setToastMessage('Please enter a valid email address ending with .com');
+      // setToastType('error');  
+    }
+    // setShowToast(true); 
+  };
+  
   return (
     <div className="get_in_touch_right">
       <h1 className="get_in_touch_right_title">Get In Touch</h1>
@@ -76,7 +103,10 @@ export const ContactUsForm = () => {
         Contact us for all your questions and opinions, or you can solve your
         problems from the support center and expert.
       </p>
-      <form className="get_in_touch_form_container" onSubmit={handleContactusForm}>
+      <form
+        className="get_in_touch_form_container"
+        onSubmit={handleContactusForm}
+      >
         <div className="get_in_touch_form_container_up">
           <div className="get_in_touch_form_input_box">
             <label htmlFor="Name">
@@ -89,7 +119,11 @@ export const ContactUsForm = () => {
               id="Name"
               value={state.name}
               onChange={(e) =>
-                dispatch({ type: types.SET_FIELD, field: "name", value: e.target.value })
+                dispatch({
+                  type: types.SET_FIELD,
+                  field: "name",
+                  value: e.target.value,
+                })
               }
               required
             />
@@ -102,9 +136,9 @@ export const ContactUsForm = () => {
               type="email"
               id="Email"
               value={state.email}
-              onChange={(e) =>
-                dispatch({ type: types.SET_FIELD, field: "email", value: e.target.value })
-              }
+              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[cC][oO][mM]$" // Ensure the email ends with .com
+              title="Please enter a valid email address ending with .com" // Title attribute to show tooltip message
+              onChange={handleEmailChange} // Handle email validation
               required
             />
           </div>
@@ -113,23 +147,28 @@ export const ContactUsForm = () => {
               Phone Number <span>*</span>
             </label>
             <input
-              type={"tel"}
+              type="tel"
               maxLength={10}
               minLength={10}
               id="PhoneNumber"
               value={state.phoneNumber}
               onChange={(e) => {
-                const value = e.target.value.replace(/\D/g, ''); 
-                if (value.length <= 10) { 
-                  dispatch({ type: types.SET_FIELD, field: "phoneNumber", value});
+                const value = e.target.value.replace(/\D/g, "");
+                if (value.length <= 10) {
+                  dispatch({
+                    type: types.SET_FIELD,
+                    field: "phoneNumber",
+                    value,
+                  });
                 }
               }}
-
               required
             />
           </div>
           <div className="get_in_touch_form_input_box">
-            <label htmlFor="Subject">Subject<span> *</span></label>
+            <label htmlFor="Subject">
+              Subject<span> *</span>
+            </label>
             <input
               type="text"
               id="Subject"
@@ -138,7 +177,11 @@ export const ContactUsForm = () => {
               value={state.subject}
               required
               onChange={(e) =>
-                dispatch({ type: types.SET_FIELD, field: "subject", value: e.target.value })
+                dispatch({
+                  type: types.SET_FIELD,
+                  field: "subject",
+                  value: e.target.value,
+                })
               }
             />
           </div>
@@ -150,12 +193,22 @@ export const ContactUsForm = () => {
           <textarea
             id="Message"
             minLength="20"
-            style={{ width: "100%",resize:'none', height: "13.25rem", fontFamily: 'sans-serif', padding: '1rem', outline: 'none' }}
+            style={{
+              width: "100%",
+              resize: "none",
+              height: "13.25rem",
+              fontFamily: "sans-serif",
+              padding: "1rem",
+              outline: "none",
+            }}
             value={state.message}
             onChange={(e) =>
-              dispatch({ type: types.SET_FIELD, field: "message", value: e.target.value })
+              dispatch({
+                type: types.SET_FIELD,
+                field: "message",
+                value: e.target.value,
+              })
             }
-            // required
           />
         </div>
         <button
@@ -166,19 +219,13 @@ export const ContactUsForm = () => {
           {isLoading ? "Submitting..." : "SUBMIT"}
         </button>
         {showToast && (
-        <Toast
-          message={toastMessage}
-          type={toastType}
-          onClose={() => setShowToast(false)}
-        />
-      )}
+          <Toast
+            message={toastMessage}
+            type={toastType}
+            onClose={() => setShowToast(false)}
+          />
+        )}
       </form>
-
-      
     </div>
   );
 };
-
-
-
-

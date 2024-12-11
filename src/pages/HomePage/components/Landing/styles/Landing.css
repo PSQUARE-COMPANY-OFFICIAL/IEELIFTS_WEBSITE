@@ -70,6 +70,8 @@
     margin-bottom:1.5rem ;
 }
 
+
+
 .landing_container_left_enhance{
     font-weight: 400;
     color: white;
@@ -87,8 +89,14 @@
     background-color: var(--primary-color);
     width: 50%;
     text-align: center;
-
+    transition: 0.3s ease-in-out;
 }
+
+.landing_container_left_download_customize_container div:nth-child(1):hover{
+    background-color: white;
+    transition: 0.3s ease-in-out;
+}
+
 .landing_container_left_download_customize_container div:nth-child(2){
     /* background-color: var(--primary-color); */
     border:2px solid var(--primary-color);
@@ -110,6 +118,10 @@
 
 .landing_container_download_catalogue{
     cursor: pointer;
+}
+
+.landing_container_download_catalogue:hover{
+    background-color: white;
 }
 
 .landing_container_right{

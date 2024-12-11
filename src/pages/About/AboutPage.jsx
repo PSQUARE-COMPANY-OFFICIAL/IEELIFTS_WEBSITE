@@ -14,6 +14,9 @@ import AboutAchievementWidget from "./reusableComponents/aboutAchievementWidget"
 import { aboutAchievementWisgetData } from "./reusableComponents/data";
 import founderImage from '../../assets/About/founderImagee.jpg'
 import { TiSocialLinkedin } from "react-icons/ti";
+import AboutCard from "./reusableComponents/AboutCard";
+import AuthorisedPartners from "../HomePage/components/authorisedPartners/authorisedPartners";
+import WordsFromClient from "../HomePage/components/wordsfromclient/wordsFromClient";
 function AboutPage() {
   // useEffect(() => {
   //   window.scrollTo(0, 0);
@@ -185,10 +188,13 @@ function AboutPage() {
               </div>
             </div>
           </div>
+          <AboutCard/>
+          
         </div>
       </div>
       {/* <HomeAchievement /> */}
-
+      <AuthorisedPartners/>
+      <WordsFromClient/>
       <OurPatrons />
       <Accredentials />
       <Footer />

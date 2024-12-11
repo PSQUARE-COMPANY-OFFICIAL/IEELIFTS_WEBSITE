@@ -23,7 +23,7 @@ function TernAndCondition() {
           </p>
           <br />
           <br />
-          <h2 className={style.hedding}>Accessing the site</h2>
+          <h2 className={style.hedding}>Accessing The Site</h2>
           <br />
           <p className={style.text}>
           By continuing to access this site, it is considered that the user has read all the terms and conditions relevant and has agreed to abide by all of them. Unless you have a preexisting agreement in writing with IEE Lifts Private Limited  governing otherwise, you shall not disobey the terms stated below.
@@ -114,7 +114,7 @@ function TernAndCondition() {
           </p>
           <br />
           <br />
-          <h2 className={style.hedding}>Other Terms and Conditions</h2>
+          <h2 className={style.hedding}>Other Terms And Conditions</h2>
           <br />
           <p className={style.text}>
           The user may be bound to several other terms and conditions in addition to these such as copyright terms, terms of specific use, privacy policy etcetera. The user agrees to abide by all of them unless there is a conflict of interest. In which case, any written formal agreement with the company may supersede the mentioned terms. These terms are subject to change at any time exclusively at the company’s sole discretion and the company shall bear no responsibility for notifying the users.

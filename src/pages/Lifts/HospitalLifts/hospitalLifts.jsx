@@ -16,7 +16,7 @@ const HospitalLifts = () => {
     <div >
       <HeroSection
         img={bannerImage}
-        title="COMMERCIAL LIFTS"
+        title="HOSPITAL LIFTS"
         text="REACH THE PINNACLE OF SUCCESS WITH US"
       />
       <div className='lifts_container '>

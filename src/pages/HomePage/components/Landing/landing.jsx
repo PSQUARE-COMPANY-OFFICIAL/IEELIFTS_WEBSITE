@@ -60,7 +60,7 @@ const Landing = () => {
             ENHANCE MOBILITY AND ADD VALUE TO YOUR PROPERTY
           </h3>
           <div className="landing_container_left_download_customize_container">
-            <div className="landing_container_download_catalogue" onClick={()=>handleDownloadClick()} >DOWNLOAD CATALOG </div>
+            <div className="landing_container_download_catalogue " onClick={()=>handleDownloadClick()} >DOWNLOAD CATALOG </div>
             <div onClick={()=>navigate('/customize-lifts')}>CUSTOMISE YOUR LIFT</div>
           </div>
         </div>

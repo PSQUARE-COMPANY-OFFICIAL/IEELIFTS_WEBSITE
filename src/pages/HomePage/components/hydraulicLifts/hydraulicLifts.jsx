@@ -1,7 +1,9 @@
 import React from "react";
 import liftImage from "../../../../assets/homepage/hydraulicLiftsImage01.jpg";
 import "./styles/HydraulicLifts.css";
+import { useNavigate } from "react-router-dom";
 const HydraulicLiftsHome = () => {
+  const navigate=useNavigate()
   return (
     <div className="hydraulic_lifts_container">
       <div className="hydraulic_lifts_sub_container">
@@ -17,8 +19,8 @@ const HydraulicLiftsHome = () => {
             further decreasing the environmental footprint. In addition, it only
             use electricity while going up and almost negligible while coming
             down.
-          </h3>
-          <button className="hydraulic_lifts_left_container_vm_btn">
+          </h3> 
+          <button className="hydraulic_lifts_left_container_vm_btn" onClick={()=>navigate('/hydraulic-lifts/')}>
             VIEW MORE
           </button>
         </div>

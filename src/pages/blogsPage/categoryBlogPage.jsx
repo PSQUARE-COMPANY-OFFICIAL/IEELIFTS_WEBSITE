@@ -9,6 +9,8 @@ import { NavLink, useNavigate, useParams } from "react-router-dom";
 import { useGetBlogsQuery } from "../../redux/rtkQuery/rtkQuery";
 const CategoryBlogPage = () => {
   const { category } = useParams(); 
+
+  
   const { isLoading, data, error } = useGetBlogsQuery(category);
   const [blogData, setBlogData] = useState(null);
   const displayData =  blogData

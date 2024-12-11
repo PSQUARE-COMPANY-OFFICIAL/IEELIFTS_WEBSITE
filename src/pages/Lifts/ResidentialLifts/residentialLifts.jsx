@@ -16,7 +16,7 @@ const ResidentialLifts = () => {
     <div >
       <HeroSection
         img={bannerImage}
-        title="INDUSTRIAL LIFTS"
+        title="RESIDENTIAL LIFTS"
         text="Built for Strength, Engineered for Powerful Performance & Efficiency"
       />
       <div className='lifts_container '>

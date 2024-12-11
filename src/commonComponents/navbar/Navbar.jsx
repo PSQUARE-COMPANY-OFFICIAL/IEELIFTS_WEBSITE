@@ -84,8 +84,8 @@ const Navbar = () => {
           <li className="dropdown" style={{ position: "relative" }} ref={dropdownRef}>
             <div
               onClick={toggleDropdown}
-              className="isActive lift_navigation"
-              style={{ color: "var(--primary-color)", position: "relative" }}
+              className={isOpen.dropdown ? "active" : "inactive"} 
+              style={{  position: "relative" }}
             >
               LIFT{" "}
               {isOpen.dropdown ? (

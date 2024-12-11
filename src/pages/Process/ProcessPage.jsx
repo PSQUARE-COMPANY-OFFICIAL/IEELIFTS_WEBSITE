@@ -11,7 +11,7 @@ const data = [
     text1:
       "Once the customer reaches out to us through the website, we schedule our first call.",
     text2:
-      "We build high-end elevators through improved user experience and streamlined workflow to enhance the tenant and visitor experience. We foresee the future with a modular solution that adjusts to your decision-making process. Consequently, develop unique systems for your building that have superior integration capabilities.",
+      "This appointment is essential to gather pertinent information regarding the client’s requirements. We discuss the facility’s size, the focus points, and, most significantly, the potent lift users. This initial stage indicates where to start once the decision is made and the order is placed.",
     img: "https://ieelifts.com/wp-content/uploads/2023/01/process-img01.jpg",
   },
   {
@@ -82,11 +82,11 @@ function ProcessPage() {
           <div style={{ width: "100%", maxWidth: "530px" , minWidth:"300px"}}>
             <h2
               className={style.hedding}
-              style={{ color: "var(--primary-color)" }}
+              style={{ color: "var(--primary-color)" ,textTransform:"uppercase"}}
             >
               Re-Designing The Urban Era
             </h2>
-            <p className={style.heddingText} style={{ marginTop: "10px", }}>
+            <p className={style.heddingText} style={{ marginTop: "10px",color:'white', textTransform:"uppercase"}}>
               IEE thrives by fostering excellence in every design
             </p>
           </div>
@@ -114,7 +114,7 @@ function ProcessPage() {
                 >
                   STEP {i + 1}
                 </p>
-                <h2 className={style.hedding} style={{ marginBottom: "18px" }}>
+                <h2 className={style.hedding} style={{ marginBottom: "18px",textTransform:"uppercase" }}>
                   {e.headding}
                 </h2>
                 <div className={style.textLineCon}

@@ -43,12 +43,12 @@ const ExperienceCenter = () => {
                                 <img src={image7}></img>
                             </div>
                             <div className='image_section'>
-                                <h2 className='article_heading'>What is an Experience Centre?</h2>
+                                <h2 className='article_heading'>Why did we build an Experience Centre?</h2>
                                 <p className='article_paragraph'>
-                                    As the name suggests, an experience centre is a dedicated space focused on showcasing a company’s products for the users to understand their working and visualise them in their homes/buildings in order to make the smartest shopping decision.
+                                Nowadays, people don’t even buy a phone without going to the retail outlet and experiencing all of its features. So how can one be expected to make a considerable investment into something that’s going to be embedded in their home/building for years? We understand that at IEE Lifts and have therefore curated a space especially for you to see exactly what our lifts would look like installed on your premises.
                                 </p>
                                 <p className='article_paragraph'>
-                                    You may have seen it for small appliances such as microwaves or even TVs placed in showrooms but you most definitely have not seen a centre with various kinds of commercial, industrial, and residential lifts in the entire Tricity area, or beyond!
+                                Not only for the visual appeal but to also see the operation and functionality of our robust elevators, we wanted to create this one-of-a-kind site. SPOILER ALERT!: There’s also a special section in our centre leveraging Virtual Reality for your seamless experience. More on that later though!
                                 </p>
                             </div>
 

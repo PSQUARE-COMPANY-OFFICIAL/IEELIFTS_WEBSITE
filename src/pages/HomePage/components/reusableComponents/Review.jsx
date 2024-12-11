@@ -11,7 +11,7 @@ import { BiSolidQuoteRight } from "react-icons/bi";
 const Review = ({reviewData}) => {
   return (
     <div className="review_container">
-      <h1>Words From Our Client</h1>
+      <h1>Words From Our Clients</h1>
       <div className="review_box">
         <div className="swiper_box">
           <Swiper

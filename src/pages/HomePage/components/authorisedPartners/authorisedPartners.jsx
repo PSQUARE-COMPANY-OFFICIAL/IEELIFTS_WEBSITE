@@ -8,7 +8,9 @@ import "./styles/AuthorisedPartners.css";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { partnersData } from "./partnersData";
+import { useLocation } from "react-router-dom";
 const AuthorisedPartners = () => {
+  const location = useLocation();
   return (
     <div className="authorised_partner_container">
       <div className="authorised_partner_sub_container">
@@ -17,9 +19,7 @@ const AuthorisedPartners = () => {
           Authorised Partners for Safe Elevators
         </h1>
         <h3 className="authorised_partner_text">
-          In partnership with reliable and trusted companies, we create and
-          install elevators fitted with top-notch components for your secured
-          standing voyage.
+        With our reliable partners, we create and set up safe elevators that are fitted with top-notch elements for your secured standing voyage.
         </h3>
         <div className="authorised_partners_slides_section">
           <Swiper
@@ -64,20 +64,25 @@ const AuthorisedPartners = () => {
             ))}
           </Swiper>
         </div>
-        <div className="Founders_Section">
-          {foundersData.map((item, index) => {
-            return (
-              <FounderDetails
-                key={index}
-                name={item.name}
-                position={item.position}
-                text={item.text}
-                image={item.image}
-                video={item.video}
-              />
-            );
-          })}
+        {!["/about", "/about/", "/safety", "/safety/"].includes(location.pathname) && (<div className="Founders_Section">
+        
+          
+            <div className="Founders_Section">
+              {foundersData.map((item, index) => (
+                <FounderDetails
+                  key={index}
+                  name={item.name}
+                  position={item.position}
+                  text={item.text}
+                  image={item.image}
+                  video={item.video}
+                />
+              ))}
+            </div>
+          
+        
         </div>
+      )}
       </div>
     </div>
   );

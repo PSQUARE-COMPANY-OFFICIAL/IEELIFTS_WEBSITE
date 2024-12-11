@@ -17,7 +17,7 @@ export const experienceWidgetData=[
     {
         heading:"Real-Time Expert Consultation",
         para:[
-            "you are met with our experts to give you all the necessary details that looked too boring to read when you were perusing our brochure! You can learn anything and everything about our models from our experts and they will guide you to find the best fit, or create one for you!",
+            "As soon as you visit the experience centre, you are met with our experts to give you all the necessary details that looked too boring to read when you were perusing our brochure! You can learn anything and everything about our models from our experts and they will guide you to find the best fit, or create one for you!",
             "Mostly you’ll see our director Mr. Prabhsimran Singh greeting you and showing you around. You can almost see the passion for this technology in his eyes and hear his enthusiasm as he speaks. When you’re there, do give him a visit and you’ll never see lifts as ordinary anymore!",
             
         ]

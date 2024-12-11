@@ -1,4 +1,9 @@
-import { Navigate, Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import {
+  Navigate,
+  Route,
+  BrowserRouter as Router,
+  Routes,
+} from "react-router-dom";
 import Layout from "../../Layout";
 import AccomplishedWork from "../../pages/AccomplishedWorkPage/accomplishedWorkPage";
 import Home from "../../pages/HomePage/homePage";
@@ -20,6 +25,8 @@ import BlogPageById from "../../pages/blogsPage/blogsPageById.jsx";
 import BlogPage from "../../pages/blogsPage/blogPage.jsx";
 import CategoryBlogPage from "../../pages/blogsPage/categoryBlogPage.jsx";
 import ExperienceCenter from "../../pages/ExperienceCenter/experienceCenter.jsx";
+import HydraulicLifts from "../../pages/HydraulicLifts/hydraulicLifts.jsx";
+import Thankyou from "../../pages/Thankyou/thankyou.jsx";
 
 
 
@@ -31,23 +38,24 @@ const Routing = () => {
           <Route index element={<Home/>}/>
           <Route path="/about" element={<AboutPage/>}/>
 
-          <Route path="/commercial-lifts" element={<CommercialLifts/>}/>
-          <Route path="/hospital-lifts" element={<HospitalLifts/>}/>
-          <Route path="/hotel-lifts" element={<HotelLifts/>}/>
-          <Route path="/residential-lifts" element={<ResidentialLifts/>}/>
-          <Route path="/industrial-lifts" element={<IndustrialLifts/>}/>
+          <Route path="/commercial-lifts" element={<CommercialLifts />} />
+          <Route path="/hospital-lifts" element={<HospitalLifts />} />
+          <Route path="/hotel-lifts" element={<HotelLifts />} />
+          <Route path="/residential-lifts" element={<ResidentialLifts />} />
+          <Route path="/industrial-lifts" element={<IndustrialLifts />} />
 
-          <Route path="/maintenance" element={<Maintenance/>}/>
-          <Route path="/accomplished-work" element={< AccomplishedWork/>} />
-          <Route path="/process" element={<ProcessPage/>}/>
-          <Route path="/safety" element={<Safety/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-          <Route path="/customize-lifts" element={<CustomizeLifts/>}/>
+          <Route path="/maintenance" element={<Maintenance />} />
+          <Route path="/accomplished-work" element={<AccomplishedWork />} />
+          <Route path="/process" element={<ProcessPage />} />
+          <Route path="/safety" element={<Safety />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact/thank-you/" element={<Thankyou />} />
+          <Route path="/customize-lifts" element={<CustomizeLifts />} />
 
-          <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
-          <Route path="/terms-and-conditions" element={<TernAndCondition/>}/>
-          <Route path="/blogs" element={<BlogPage/>}/>
-
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<TernAndCondition />} />
+          <Route path="/blogs" element={<BlogPage />} />
+          <Route path="/hydraulic-lifts" element={<HydraulicLifts />} />
 
           <Route path="/:id" element={<BlogPageById/>}/>
           {/* <Route path="/blog/:id" element={<BlogDetail/>}/> */}

@@ -24,11 +24,11 @@
 
 .navbar_container .active{
     /* background-color: rgb(26, 138, 236); */
-    color: white;
+    color: var(--primary-color);
 }
 
 .navbar_container .inactive{
-    color: var(--primary-color);
+    color: white;
 }
 
 
@@ -47,15 +47,27 @@
     transition: max-height 0.3s ease-in-out;
 }
 
+.navbar_container  a{
+    transition: color 0.1s ease-in-out;
+}
+.navbar_container  a:hover{
+    color: var(--primary-color);
+    transition: color 0.1s ease-in-out;
+}
 
 .lift_navigation{
-    color: var(--primary-color);
+    color: white;
     position:relative;
 }
 
 .navbar_child_center li {
     list-style: none;
     cursor: pointer;
+}
+.navbar_child_center li:hover{
+    /* list-style: none; */
+    /* cursor: pointer; */
+    color: var(--primary-color);
 }
 
 .navbar_child_right {
@@ -117,11 +129,11 @@
     text-align: left;
 }
 
-.lifts_dropdown_container.active{
+.lifts_dropdown_container.inactive{
     color: white;
 }
 
-.lifts_dropdown_container .inactive{
+.lifts_dropdown_container .active{
     color: var(--primary-color);
     
 }
