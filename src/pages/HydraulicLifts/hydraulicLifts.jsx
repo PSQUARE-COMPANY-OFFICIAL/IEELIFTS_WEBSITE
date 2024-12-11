@@ -10,6 +10,8 @@ import emergencyrescue from "../../assets/hydraulicLifts/emergencyrescue.jpg";
 import emergencysaving from "../../assets/hydraulicLifts/emergencysaving.jpg";
 import headroom from "../../assets/hydraulicLifts/headroom.jpg";
 import versatality from "../../assets/hydraulicLifts/versatality.jpg";
+import HydraulicLiftsHome from "../HomePage/components/hydraulicLifts/hydraulicLifts";
+import Footer from "../../commonComponents/footer/footer";
 
 const HydraulicLifts = () => {
   return (
@@ -19,6 +21,7 @@ const HydraulicLifts = () => {
         title="Hydraulic Lifts"
         text="fully customised elevators"
       />
+      <HydraulicLiftsHome/>
       <div className={styles.hydraulicLifts_advantageSection}>
         <div className={styles.hydraulicLiftsadvantages_leftsec}>
           <div className={styles.hydraulicLiftsadvantages_leftsec_heading}>
@@ -159,6 +162,7 @@ const HydraulicLifts = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
