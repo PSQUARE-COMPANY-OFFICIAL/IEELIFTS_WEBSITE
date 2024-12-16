@@ -59,7 +59,7 @@ const Blog = () => {
     <div className="blog_container">
       <div className="blog_sub_container">
         <h1 className="blog_title">{blogData?.blogTitle}</h1>
-        <img src="https://ieelifts.com/wp-content/uploads/2024/05/Lifts01-2048x1366.webp" alt="" />
+        <img src={blogData?.blogImage } alt={'Blog image'} />
         <h5>{date}</h5>
         <p>{getTextWithLinks(blogData?.blogTitleFollowupText, blogData?.blogLinks || [])}</p>
       </div>

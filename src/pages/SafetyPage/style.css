@@ -54,6 +54,8 @@
   }
   
 
+  
+
 @media(max-width:480px){
     
 }
@@ -86,4 +88,9 @@
     
         z-index: 10;
       }
+
+      .cardColumn{
+        display: flex;
+        flex-direction: column;
+      }  
 }

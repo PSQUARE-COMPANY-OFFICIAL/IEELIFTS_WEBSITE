@@ -24,7 +24,7 @@
   justify-content: center;
   align-items: center;
   padding: 40px 3%;
-  gap: 15px;
+  gap: 1rem;
 }
 .cardImage {
   background-color: var(--light-theme);
@@ -38,12 +38,12 @@
 .cardText {
   color: var(--primary-color);
   font-family: "Barlow", Sans-serif;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 400;
 }
 .box {
   flex: 1;
-  min-width: 500px;
+  /* min-width: 500px; */
 }
 .heddingText {
   text-align: left;
@@ -67,9 +67,9 @@
   font-size: 18px;
 }
 .imgContainer{
-  max-width: 540px;
+  /* max-width: 540px; */
   flex: 1;
-  min-width: 400px;
+  /* min-width: 400px; */
 }
 
 @media (max-width: 640px) {
@@ -84,9 +84,9 @@
   }
 }
 
-@media (max-width: 1480px) {
+@media (max-width: 1375px) {
   .innerContainer {
-    max-width: 1200px;
+    max-width: 90%;
   }
 }
 @media (max-width: 1368px) {

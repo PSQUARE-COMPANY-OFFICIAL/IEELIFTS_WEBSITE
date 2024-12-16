@@ -4,6 +4,13 @@ import OurPatrons from "../AccomplishedWorkPage/components/ourpatrons/ourPatrons
 import Footer from "../../commonComponents/footer/footer";
 import WordsFromClient from "../HomePage/components/wordsfromclient/wordsFromClient";
 import bannerImage from '../../assets/processBannerImage.png'
+import image1 from './../../assets/Process/process-img01.jpg'
+import image2 from './../../assets/Process/process-img02.jpg'
+import image3 from './../../assets/Process/process-img03.jpg'
+import image4 from './../../assets/Process/process-img04.jpg'
+import image5 from './../../assets/Process/process-img05.jpg'
+import image6 from './../../assets/Process/process-img06.jpg'
+import image7 from './../../assets/Process/process-img07.jpg'
 import style from "./style.module.css";
 const data = [
   {
@@ -12,7 +19,7 @@ const data = [
       "Once the customer reaches out to us through the website, we schedule our first call.",
     text2:
       "This appointment is essential to gather pertinent information regarding the client’s requirements. We discuss the facility’s size, the focus points, and, most significantly, the potent lift users. This initial stage indicates where to start once the decision is made and the order is placed.",
-    img: "https://ieelifts.com/wp-content/uploads/2023/01/process-img01.jpg",
+    img: image1,
   },
   {
     headding: "Field Analysis By Field Design Department",
@@ -20,7 +27,7 @@ const data = [
       "Our Field Design Department then prepares for the area visit for a detailed site analysis.",
     text2:
       "The size of the site, the number of floors, and the building structure that makes up the underground facility are all listed in a detailed document. The team creates a list of particular needs that must be supplied by the client, such as civil requirements, electrical requirements, etc.",
-    img: "https://ieelifts.com/wp-content/uploads/2023/01/process-img02.jpg",
+    img: image2,
   },
   {
     headding: "Site Drawings Are Produced",
@@ -28,7 +35,7 @@ const data = [
       "Using extensive study and the help of architects, site drawings are created.",
     text2:
       "Before beginning work on the site, in construction, or assembly, we create and submit GA drawings of the lift system to architects and owners for approval. Any modifications to the size or directions are considered, along with any new requirements. The dimensions of the hoistway walls and the pit’s depth are shown in these drawings, along with other features.",
-    img: "https://ieelifts.com/wp-content/uploads/2023/01/process-img03.jpg",
+    img: image3,
   },
   {
     headding: "Design Samples Are Presented",
@@ -36,7 +43,7 @@ const data = [
       "It’s time to show the client some design samples after the final drawings.",
     text2:
       "At this point, based on the drawings and site analysis, our team provides the client with the best design samples. This is important since the client-selected sample serves as the basis for procuring the materials. Additionally, the possibility for customization depends on the utility and aesthetic appeal.",
-    img: "https://ieelifts.com/wp-content/uploads/2023/01/process-img04.jpg",
+    img: image4,
   },
   {
     headding: "And The Development Starts",
@@ -44,7 +51,7 @@ const data = [
       "We start the development once the client has approved the design sample and the drawings.",
     text2:
       "Upon procuring the materials as per discussion with the client, we begin our lift installation process. A shaft is constructed first using concrete or steel, depending on the lift’s material type. Further passenger conveyors are installed, which are built and tested off-site.",
-    img: "https://ieelifts.com/wp-content/uploads/2023/01/process-img05.jpg",
+    img: image5,
   },
   {
     headding: "Certificate Of Completion",
@@ -52,7 +59,7 @@ const data = [
       "Before we provide the client with the control panel, this is the last step of the lift installation process.",
     text2:
       "Once the entire installation procedure is finished and the lift is prepared for usage, one of the crucial documents, known as a completion certificate (CC), is received. This certificate verifies that the lift was built properly and is safe for users.",
-    img: "https://ieelifts.com/wp-content/uploads/2023/01/process-img06.jpg",
+    img: image6,
   },
   {
     headding: "Selecting Maintenance Packages",
@@ -60,7 +67,7 @@ const data = [
       "IEE maintenance service packages are now being made accessible since the lift has been installed.",
     text2:
       "We provide the most cutting-edge approaches to maintain your elevator in top condition and easily upgrade it with the best advancements. Our maintenance programme is customised to your requirements and ensures that your equipment operates safely and dependably while prolonging its life.",
-    img: "https://ieelifts.com/wp-content/uploads/2023/01/process-img07.jpg",
+    img: image7,
   },
 ];
 

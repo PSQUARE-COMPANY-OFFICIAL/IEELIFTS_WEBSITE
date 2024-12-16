@@ -26,7 +26,7 @@ const ContactPage=()=> {
           </div>
           <div className='contact_form_map_container'>
             <ContactUsForm/>
-            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.0712260346186!2d76.6932162261035!3d30.71639798642092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fee584d679ae5%3A0x6a1ee486e89c1c9a!2sPP72%2BPFW%2C%20Industrial%20Area%2C%20Sector%2073%2C%20Sahibzada%20Ajit%20Singh%20Nagar%2C%20Punjab%20140308!5e0!3m2!1sen!2sin!4v1732775584356!5m2!1sen!2sin" width="100%" height="100%" style={{border:0,borderRadius:'0.25rem'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d303.18435102076336!2d76.69609202356591!3d30.714496085938677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fee5703d374e5%3A0xda2704bd4dce4210!2sIEE%20LIFTS%20%7C%20Lifts%20Manufacturer%20Chandigarh!5e0!3m2!1sen!2sin!4v1734334194815!5m2!1sen!2sin" width="100%" height="100%" style={{border:0,borderRadius:'0.25rem'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             
           </div>
         </div>

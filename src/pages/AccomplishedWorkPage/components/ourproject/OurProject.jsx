@@ -8,7 +8,7 @@ const OurProject = () => {
     <div className="our_projects_container">
       <div className="our_projects_sub_container">
         <div className="our_projects_top">
-          <h1 className="">Our Projects Gallery</h1>
+          <h1  className="our_projects_top_title">Our Projects Gallery</h1>
           <h3 className="our_projects_top_text">
             Discover a selection of our successful lift installations for
             various commercial and residential projects. From cutting-edge

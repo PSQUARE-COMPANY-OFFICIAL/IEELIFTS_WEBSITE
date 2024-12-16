@@ -263,7 +263,7 @@ const handleEmailChange = (e) => {
                 </label>
                 <textarea
                   id="Message"
-                  minLength="20"
+                  minLength="0"
                   maxLength="1000"
                   style={{
                     width: "100%",

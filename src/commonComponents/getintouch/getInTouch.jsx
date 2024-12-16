@@ -172,7 +172,7 @@ export const ContactUsForm = () => {
             <input
               type="text"
               id="Subject"
-              minLength="10"
+              minLength="5"
               maxLength="100"
               value={state.subject}
               required

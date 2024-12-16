@@ -14,6 +14,12 @@ import img2 from "./safety-icon-02.png";
 import img3 from "./safety-icon-03.png";
 import img4 from "./safety-icon-04.png";
 import img5 from "./safety-icon-05.png";
+import gear from '../../assets/About/gear.png'
+import womanImage from './woman.jpg'
+import automaticRescueImage from './automatic-rescue-device.jpg'
+import hmiImage from './hmi.jpg'
+import liftVideoImage from './liftVideoImage.jpg'
+import overspeedgovernorImage from './overspeed-governor.jpg'
 import AuthorisedPartners from "../HomePage/components/authorisedPartners/authorisedPartners";
 const card = [
   {
@@ -54,9 +60,9 @@ function Safety() {
   const closeOverlayHandler = () => {
     setIsOverlayOpen(false);
   };
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  // useEffect(() => {
+  //   window.scrollTo(0, 0)
+  // }, [])
   return (
     <>
       <HeroSection
@@ -78,7 +84,7 @@ function Safety() {
           ))}
         </div>
         <div
-          className={`${style.innerContainer}  ${style.cardContainer}`}
+          className={`${style.innerContainer}  ${style.cardContainer} cardColumn`}
           style={{ width: "90%", alignItems: "center" }}
         >
           <div className={` ${style.box}`} style={{ paddingRight: "10px" }}>
@@ -103,10 +109,10 @@ function Safety() {
               arrive at your terminus on time, in good health and spirits.
             </p>
           </div>
-          <div className={`${style.box}`} style={{ flex: 1 }}>
+          <div className={`${style.box}`} style={{ flex: 1 ,height:'100%',width:'100%'}}>
             <img
-              src="https://ieelifts.com/wp-content/uploads/2023/08/woman-girl-talking-before-closed-elevator-doors-1-1-scaled.jpg"
-              style={{ width: "100%" }}
+              src={womanImage}
+              style={{ width: "100%" ,height:'100%'}}
               alt=""
             />
             {isOverlayOpen && (
@@ -132,7 +138,7 @@ function Safety() {
           </div>
         </div>
         <div
-          className={`${style.innerContainer} ${style.cardContainer}`}
+          className={`${style.innerContainer} ${style.cardContainer} `}
           style={{ justifyContent: "space-between", gap: "50px" }}
         >
           <div
@@ -144,7 +150,7 @@ function Safety() {
             }}
           >
             <img
-              src="https://ieelifts.com/wp-content/uploads/2023/01/safety-setting-icon01.png"
+              src={gear}
               alt=""
               style={{ height: "50px", aspectRatio: "1" }}
             />
@@ -175,7 +181,7 @@ function Safety() {
             }}
           >
             <img
-              src="https://ieelifts.com/wp-content/uploads/2023/01/safety-setting-icon01.png"
+              src={gear}
               alt=""
               style={{ height: "50px", aspectRatio: "1" }}
             />
@@ -206,7 +212,7 @@ function Safety() {
             }}
           >
             <img
-              src="https://ieelifts.com/wp-content/uploads/2023/01/safety-setting-icon01.png"
+              src={gear}
               alt=""
               style={{ height: "50px", aspectRatio: "1" }}
             />
@@ -229,12 +235,12 @@ function Safety() {
           </div>
         </div>
         <div
-          className={`${style.innerContainer}  ${style.cardContainer}`}
+          className={`${style.innerContainer}  ${style.cardContainer} cardColumn`}
           style={{ width: "90%", alignItems: "center" ,  gap:"10%", rowGap:"60px"}}
         >
           <div
-            className={` ${style.box}`}
-            style={{ paddingRight: "10px", minWidth: "490px", }}
+            className={` ${style.box} `}
+            style={{ paddingRight: "10px",  }}
           >
             <h2 className={`${style.hedding}`} style={{ marginBottom: "15px" }}>
               Automatic Rescue Device (ARD)
@@ -258,28 +264,28 @@ function Safety() {
               your family and seniors safe and secure at all times.
             </p>
           </div>
-          <div className={`${style.imgContainer}`} style={{ maxWidth: "" }}>
+          <div className={`${style.imgContainer}`} style={{ }}>
             <img
-              src="https://ieelifts.com/wp-content/uploads/2023/01/safety-main-img01.jpg"
-              style={{ width: "100%" }}
+              src={automaticRescueImage}
+              style={{ width: "100%",height:"100%" }}
               alt=""
             />
           </div>
         </div>
         <div
-          className={`${style.innerContainer}  ${style.cardContainer}`}
+          className={`${style.innerContainer}  ${style.cardContainer} cardColumn`}
           style={{ width: "90%", alignItems: "center" ,  gap:"10%",rowGap:"60px"}}
         >
           <div className={`${style.imgContainer}`} style={{ maxWidth: "" }}>
             <img
-              src="https://ieelifts.com/wp-content/uploads/2023/01/safety-main-img02.jpg"
+              src={overspeedgovernorImage}
               style={{ width: "100%" }}
               alt=""
             />
           </div>
           <div
             className={` ${style.box}`}
-            style={{ paddingRight: "10px", minWidth: "490px", }}
+            style={{ paddingRight: "10px", minWidth: "", }}
           >
             <h2 className={`${style.hedding}`} style={{ marginBottom: "15px" }}>
               Over Speed Governer (OSG)
@@ -305,12 +311,12 @@ function Safety() {
           </div>
         </div>
         <div
-          className={`${style.innerContainer}  ${style.cardContainer}`}
+          className={`${style.innerContainer}  ${style.cardContainer} cardColumn`}
           style={{ width: "90%", alignItems: "center", gap:"10%", rowGap:"60px" }}
         >
           <div
             className={` ${style.box}`}
-            style={{ paddingRight: "10px", minWidth: "490px" }}
+            style={{ paddingRight: "10px",  }}
           >
             <h2 className={`${style.hedding}`} style={{ marginBottom: "15px" }}>
             Human Machine Interfaces (HMI)
@@ -329,7 +335,7 @@ function Safety() {
           </div>
           <div className={`${style.imgContainer}`} >
             <img
-              src="https://ieelifts.com/wp-content/uploads/2023/01/safety-main-img03.jpg"
+              src={hmiImage}
               style={{ width: "100%" }}
               alt=""
             />
@@ -338,7 +344,7 @@ function Safety() {
         <div
           className={`${style.innerContainer} `} style={{position:"relative"}}
         >
-          <img src="https://ieelifts.com/wp-content/uploads/2023/01/safety-main-img04.jpg" style={{width:"100%", aspectRatio:"16/9"}} alt="" />
+          <img src={liftVideoImage} style={{width:"100%", aspectRatio:"16/9"}} alt="" />
           <BsPlayCircle
             onClick={()=>buttonClickHandler()}
             style={{position:'absolute'}}

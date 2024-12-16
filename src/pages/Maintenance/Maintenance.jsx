@@ -9,6 +9,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { FaCheck } from "react-icons/fa";
 import { MdOutlineFileDownload } from "react-icons/md";
 import pdf from './../../assets/IEE-LIFTS-BROCHURE.pdf'
+import maintainanceImage from '../../assets/maintananceImage/maintenance-img-01.jpg'
+import womanImage from '../SafetyPage/woman.jpg'
 function Maintenance() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -61,7 +63,7 @@ function Maintenance() {
           </div>
           <div className={`${style.imgContainer}`}>
             <img
-              src="https://ieelifts.com/wp-content/uploads/2023/01/maintenance-img-01.jpg"
+              src={maintainanceImage}
               style={{ width: "100%" }}
               alt=""
             />
@@ -488,7 +490,7 @@ function Maintenance() {
           >
             <div className={`${style.box}`} style={{ flex: 1 }}>
               <img
-                src="https://ieelifts.com/wp-content/uploads/2023/08/woman-girl-talking-before-closed-elevator-doors-1-1-scaled.jpg"
+                src={womanImage}
                 style={{ width: "100%" }}
                 alt=""
               />

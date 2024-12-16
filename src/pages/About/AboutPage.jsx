@@ -17,6 +17,7 @@ import { TiSocialLinkedin } from "react-icons/ti";
 import AboutCard from "./reusableComponents/AboutCard";
 import AuthorisedPartners from "../HomePage/components/authorisedPartners/authorisedPartners";
 import WordsFromClient from "../HomePage/components/wordsfromclient/wordsFromClient";
+import AuthorisedPartnersAbout from "./reusableComponents/authorisedPartnerAbout";
 function AboutPage() {
   // useEffect(() => {
   //   window.scrollTo(0, 0);
@@ -193,7 +194,7 @@ function AboutPage() {
         </div>
       </div>
       {/* <HomeAchievement /> */}
-      <AuthorisedPartners/>
+      <AuthorisedPartnersAbout/>
       <WordsFromClient/>
       <OurPatrons />
       <Accredentials />

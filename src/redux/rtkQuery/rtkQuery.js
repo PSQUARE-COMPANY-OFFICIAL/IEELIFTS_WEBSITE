@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export const faqApi = createApi({
     reducerPath: 'getfaqApi',
-    baseQuery: fetchBaseQuery({ baseUrl: 'http://192.168.29.251:3001/api/v1/' }),
+    baseQuery: fetchBaseQuery({ baseUrl: 'http://ieelifts.com/api/v1/' }),
     endpoints: (builder) => ({
       getAllFaqs:builder.query({query:()=>'/getAllFaqs'}),
       // deleteFaq:builder.query({query:()=>'/deleteFaq'})
@@ -16,7 +16,7 @@ export const {useGetAllFaqsQuery}=faqApi
 
 export const showcaseGalleryApi=createApi({
   reducerPath: 'showcaseGalleryApi',
-    baseQuery: fetchBaseQuery({ baseUrl: 'http://192.168.29.251:3001/api/v1/' }),
+    baseQuery: fetchBaseQuery({ baseUrl: 'http://ieelifts.com/api/v1/' }),
     endpoints: (builder) => ({
       createImageOfShowcaseGallery:builder.query({query:()=>'/createImageInShowcaseGallery'}),
       getAllImagesOfShowcaseGallery:builder.query({query:()=>'/getAllImageInShowcaseGallery'})
@@ -34,7 +34,7 @@ export const {useCreateImageOfShowcaseGalleryQuery,useGetAllImagesOfShowcaseGall
 
 export const wordsFromClientApi=createApi({
   reducerPath: 'wordsFromClientApi',
-    baseQuery: fetchBaseQuery({ baseUrl: 'http://192.168.29.251:3001/api/v1/' }),
+    baseQuery: fetchBaseQuery({ baseUrl: 'https://ieelifts.com/api/v1/' }),
     endpoints: (builder) => ({
       getWordsFromClient:builder.query({query:()=>'/getAllReviews'})
     }),
@@ -45,7 +45,7 @@ export const{useGetWordsFromClientQuery} =wordsFromClientApi
 
 export const blogsApi = createApi({
   reducerPath: 'blogsApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://192.168.29.251:3001/api/v1/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://ieelifts.com/api/v1/' }),
   tagTypes: ['Post', 'Get'],
   endpoints: (builder) => ({
     getBlogs:builder.query({query:(category)=>`/getAllBlogs?blogCategory=${category}`}),
@@ -65,7 +65,7 @@ export const { useGetBlogByIdQuery,useGetLastFewBlogsQuery,useGetBlogsQuery } = 
 
 export const signupForNewsLetterApi = createApi({
   reducerPath: 'signupForNewsLetterApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://192.168.29.251:3001/api/v1/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://ieelifts.com/api/v1/' }),
   tagTypes: ['Post', 'Get'],
   endpoints: (builder) => ({
     signupForNewsLetterApi: builder.mutation({

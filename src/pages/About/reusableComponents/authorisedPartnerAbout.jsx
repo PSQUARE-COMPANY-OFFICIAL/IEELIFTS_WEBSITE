@@ -1,15 +1,15 @@
 import React from "react";
-import { foundersData } from "../reusableComponents/widgetData";
-import FounderDetails from "../reusableComponents/founderDetails";
+// import { foundersData } from "../reusableComponents/widgetData";
+// import FounderDetails from "../reusableComponents/founderDetails";
 import "swiper/css";
 import "swiper/css/bundle";
-import "./../../../../index.css";
-import "./styles/AuthorisedPartners.css";
+import "./../../../index.css";
+import "./style/reusable.css";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { partnersData } from "./partnersData";
+import { partnersData } from "../../HomePage/components/authorisedPartners/partnersData";
 import { useLocation } from "react-router-dom";
-const AuthorisedPartners = () => {
+const AuthorisedPartnersAbout = () => {
   const location = useLocation();
   return (
     <div className="authorised_partner_container">
@@ -21,7 +21,7 @@ const AuthorisedPartners = () => {
         <h3 className="authorised_partner_text">
         With our reliable partners, we create and set up safe elevators that are fitted with top-notch elements for your secured standing voyage.
         </h3>
-        <div className="authorised_partners_slides_section">
+        <div className="authorised_partners_slides_section_about">
           <Swiper
             modules={[Navigation, Autoplay]}
             breakpoints={{
@@ -64,29 +64,10 @@ const AuthorisedPartners = () => {
             ))}
           </Swiper>
         </div>
-        {!["/about", "/about/", "/safety", "/safety/"].includes(location.pathname) && 
-        (<div className="Founders_Section">
         
-          
-            <div className="Founders_Section">
-              {foundersData.map((item, index) => (
-                <FounderDetails
-                  key={index}
-                  name={item.name}
-                  position={item.position}
-                  text={item.text}
-                  image={item.image}
-                  video={item.video}
-                />
-              ))}
-            </div>
-          
-        
-        </div>
-      )}
       </div>
     </div>
   );
 };
 
-export default AuthorisedPartners;
+export default AuthorisedPartnersAbout;
