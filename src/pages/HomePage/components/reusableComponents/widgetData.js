@@ -44,12 +44,12 @@ export const widgetData=[
 export const achievementWidgetData=[
     {
         image:achievementWidgetImage1,
-        number:'17+',
+        number:'18+',
         text:'Years Experience'
     },
     {
         image:achievementWidgetImage2,
-        number:'2000+',
+        number:'3500+',
         text:'Lifts Installed'
     },
     {
@@ -59,7 +59,7 @@ export const achievementWidgetData=[
     },
     {
         image:achievementWidgetImage1,
-        number:'115+',
+        number:'175+',
         text:'Professionals'
     },
 ]

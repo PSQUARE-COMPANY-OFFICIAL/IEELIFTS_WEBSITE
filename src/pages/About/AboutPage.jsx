@@ -19,9 +19,9 @@ import AuthorisedPartners from "../HomePage/components/authorisedPartners/author
 import WordsFromClient from "../HomePage/components/wordsfromclient/wordsFromClient";
 import AuthorisedPartnersAbout from "./reusableComponents/authorisedPartnerAbout";
 function AboutPage() {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   
 

@@ -192,7 +192,6 @@ export const ContactUsForm = () => {
           </label>
           <textarea
             id="Message"
-            minLength="20"
             style={{
               width: "100%",
               resize: "none",

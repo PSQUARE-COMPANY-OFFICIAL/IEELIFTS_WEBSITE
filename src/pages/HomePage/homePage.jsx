@@ -16,9 +16,9 @@ import ShowcaseGallery from './components/ShowcaseGallery/showcaseGallery'
 import OurBlogs from './components/ourblogs/ourBlogs'
 import './styles/Homepage.css'
 const Home = () => {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0)
-  // }, [])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className='homepage_main_container'>
       <Landing/>
