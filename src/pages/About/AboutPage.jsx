@@ -18,6 +18,7 @@ import AboutCard from "./reusableComponents/AboutCard";
 import AuthorisedPartners from "../HomePage/components/authorisedPartners/authorisedPartners";
 import WordsFromClient from "../HomePage/components/wordsfromclient/wordsFromClient";
 import AuthorisedPartnersAbout from "./reusableComponents/authorisedPartnerAbout";
+import { Helmet } from "react-helmet";
 function AboutPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -32,6 +33,13 @@ function AboutPage() {
 
   return (
     <>
+    <Helmet>
+        <title>Top Lifts Manufacturing Company in Mohali - IEE Lifts</title>
+        <meta
+          name="description"
+          content="Best lifts manufacturing company in Mohali offers a wide range of lifts designed for residential applications, homes and hospitals."
+        />
+      </Helmet>
       <HeroSection
         img={bannerImage}
         title="About"
@@ -119,6 +127,7 @@ function AboutPage() {
             <div className="about_ach_cards">
               {aboutAchievementWisgetData.map((item, index) => (
                 <AboutAchievementWidget
+                  key={index}
                   image={item.image}
                   title={item.title}
                   para={item.para}

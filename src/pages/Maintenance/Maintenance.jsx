@@ -11,6 +11,7 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import pdf from './../../assets/IEE-LIFTS-BROCHURE.pdf'
 import maintainanceImage from '../../assets/maintananceImage/maintenance-img-01.jpg'
 import womanImage from '../SafetyPage/woman.jpg'
+import { Helmet } from "react-helmet";
 function Maintenance() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -25,6 +26,13 @@ function Maintenance() {
   const navigate=useNavigate()
   return (
     <>
+      <Helmet>
+        <title>Elevator Repair Service | Lift Repair | IEE Lifts</title>
+        <meta
+          name="description"
+          content="Choose IEE Lifts as your reliable partner for lift repair services, delivering top-notch performance and long-lasting peace of mind. Schedule service today."
+        />
+      </Helmet>
       <HeroSection
         img={
           bannerImage

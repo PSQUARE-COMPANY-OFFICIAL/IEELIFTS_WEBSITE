@@ -9,6 +9,7 @@ import BlogWidget from "../HomePage/components/reusableComponents/blogWidget";
 import { NavLink, useNavigate } from "react-router-dom";
 import moment from "moment";
 import { useGetLastFewBlogsQuery } from "../../redux/rtkQuery/rtkQuery";
+import { Helmet } from "react-helmet";
 const BlogPage = () => {
 
   const [blogData, setBlogData] = useState(null);
@@ -32,6 +33,13 @@ const BlogPage = () => {
   }, []);
   return (
     <div>
+      <Helmet>
+        <title>Latest trends in Lift Manufacturers Industry</title>
+        <meta
+          name="description"
+          content="Latest trends in the lift manufacturers industry. Stay informed and up-to-date with our blog page, featuring informative and engaging content"
+        />
+      </Helmet>
       <HeroSection 
       img={bannerImage}
       title={'Blogs'}

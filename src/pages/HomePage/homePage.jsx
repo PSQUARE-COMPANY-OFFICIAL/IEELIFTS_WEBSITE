@@ -15,12 +15,20 @@ import MobileApp from './components/mobileApp/mobileApp'
 import ShowcaseGallery from './components/ShowcaseGallery/showcaseGallery'
 import OurBlogs from './components/ourblogs/ourBlogs'
 import './styles/Homepage.css'
+import { Helmet } from 'react-helmet'
 const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
   return (
     <div className='homepage_main_container'>
+      <Helmet>
+        <title>Best Lifts Manufacturing Company In Mohali | IEE Lifts</title>
+        <meta
+          name="description"
+          content="IEE Lifts is a top lift manufacturing company in Mohali, offers reliable and modern elevators for homes, residential spaces, and hospitals."
+        />
+      </Helmet>
       <Landing/>
       <Features/>
       <HomeAbout/>

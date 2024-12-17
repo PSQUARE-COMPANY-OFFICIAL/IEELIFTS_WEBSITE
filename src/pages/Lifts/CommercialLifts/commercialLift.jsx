@@ -9,12 +9,20 @@ import Faq from '../../../commonComponents/faq/Faq'
 import Footer from '../../../commonComponents/footer/footer'
 import HeroSection from '../../../commonComponents/HeroSection/HeroSection'
 import LiftFeatureCard from '../../../reusablecomponents/LiftFeatureCard/liftFeatureCard'
+import { Helmet } from 'react-helmet'
 const CommercialLifts = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
   return (
     <div >
+      <Helmet>
+        <title>Top-Quality Commercial Lifts and Cargo Elevators by IEE Lifts</title>
+        <meta
+          name="description"
+          content="Elevate Your Commercial Space with IEE Lifts – Experience Superior Vertical Mobility, Efficiency, and Reliability. Explore Our Commercial Lifts Today!"
+        />
+      </Helmet>
       <HeroSection
         img={bannerImage}
         title="COMMERCIAL LIFTS"

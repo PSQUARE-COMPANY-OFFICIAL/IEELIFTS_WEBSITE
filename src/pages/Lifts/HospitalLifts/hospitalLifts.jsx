@@ -8,12 +8,20 @@ import Faq from '../../../commonComponents/faq/Faq'
 import Footer from '../../../commonComponents/footer/footer'
 import HeroSection from '../../../commonComponents/HeroSection/HeroSection'
 import LiftFeatureCard from '../../../reusablecomponents/LiftFeatureCard/liftFeatureCard'
+import { Helmet } from 'react-helmet'
 const HospitalLifts = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
   return (
     <div >
+      <Helmet>
+        <title>Top Hospital Lift Manufacturers in Mohali – IEE Lifts</title>
+        <meta
+          name="description"
+          content="IEE Lifts, a top hospital lift manufacturer in Mohali, offers reliable, safe, and efficient elevators, designed by our expert in-house engineering team."
+        />
+      </Helmet>
       <HeroSection
         img={bannerImage}
         title="HOSPITAL LIFTS"

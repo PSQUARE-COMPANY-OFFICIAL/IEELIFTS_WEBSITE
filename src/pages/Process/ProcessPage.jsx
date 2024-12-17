@@ -12,6 +12,7 @@ import image5 from './../../assets/Process/process-img05.jpg'
 import image6 from './../../assets/Process/process-img06.jpg'
 import image7 from './../../assets/Process/process-img07.jpg'
 import style from "./style.module.css";
+import { Helmet } from "react-helmet";
 const data = [
   {
     headding: "We Connect & Discuss",
@@ -77,6 +78,13 @@ function ProcessPage() {
   }, [])
   return (
     <>
+      <Helmet>
+        <title>The Journey to Elevator Excellence – Our Process | IEE Lifts</title>
+        <meta
+          name="description"
+          content="At IEE Lifts, we blend experience, expertise, and a passion for elevators to deliver exceptional solutions. Explore our portfolio of accomplished projects."
+        />
+      </Helmet>
       <HeroSection
         img={
           bannerImage

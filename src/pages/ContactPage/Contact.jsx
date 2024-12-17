@@ -6,12 +6,20 @@ import { contactPageData } from './data'
 import'./styles/ContactPage.css'
 import { ContactUsForm } from '../../commonComponents/getintouch/getInTouch'
 import Footer from '../../commonComponents/footer/footer'
+import { Helmet } from 'react-helmet'
 const ContactPage=()=> {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
   return (
     <div  >
+      <Helmet>
+        <title>Contact us | Best Lift Company in India – IEE Lifts</title>
+        <meta
+          name="description"
+          content="Check out the best lift company in India. Contact us at +91 9620000026 or email at ieechandigarh@gmail.com."
+        />
+      </Helmet>
       <HeroSection
         img={bannerImage}
         title="Contact"

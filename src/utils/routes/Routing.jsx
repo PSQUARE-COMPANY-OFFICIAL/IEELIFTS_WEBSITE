@@ -1,5 +1,4 @@
 import {
-  Navigate,
   Route,
   BrowserRouter as Router,
   Routes,
@@ -14,7 +13,6 @@ import PrivacyPolicy from "../../pages/Documents/PrivacyPolicy.jsx";
 import TernAndCondition from "../../pages/Documents/TernAndCondition.jsx";
 import AboutPage from "../../pages/About/AboutPage.jsx";
 import Maintenance from "../../pages/Maintenance/Maintenance.jsx";
-import Center from "../../pages/Center/Center.jsx";
 import CommercialLifts from "../../pages/Lifts/CommercialLifts/commercialLift.jsx";
 import HospitalLifts from "../../pages/Lifts/HospitalLifts/hospitalLifts.jsx";
 import HotelLifts from "../../pages/Lifts/HotelLifts/hotelLifts.jsx";

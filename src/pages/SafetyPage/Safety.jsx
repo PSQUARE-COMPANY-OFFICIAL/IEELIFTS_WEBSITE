@@ -21,6 +21,7 @@ import hmiImage from './hmi.jpg'
 import liftVideoImage from './liftVideoImage.jpg'
 import overspeedgovernorImage from './overspeed-governor.jpg'
 import AuthorisedPartners from "../HomePage/components/authorisedPartners/authorisedPartners";
+import { Helmet } from "react-helmet";
 const card = [
   {
     img: img1,
@@ -65,6 +66,13 @@ function Safety() {
   }, [])
   return (
     <>
+      <Helmet>
+        <title>Elevators | Safety Standards | Lift Installation | IEE Lifts</title>
+        <meta
+          name="description"
+          content="At IEE Lifts, we prioritize safety in every lift installation and maintenance service, ensuring your well-being is always our top concern."
+        />
+      </Helmet>
       <HeroSection
         img={
           bannerImage

@@ -8,12 +8,20 @@ import Faq from '../../../commonComponents/faq/Faq'
 import Footer from '../../../commonComponents/footer/footer'
 import HeroSection from '../../../commonComponents/HeroSection/HeroSection'
 import LiftFeatureCard from '../../../reusablecomponents/LiftFeatureCard/liftFeatureCard'
+import { Helmet } from 'react-helmet'
 const ResidentialLifts = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
   return (
     <div >
+      <Helmet>
+        <title>Residential Lifts | Trusted Home Lift Manufacturers | IEE Lifts</title>
+        <meta
+          name="description"
+          content="IEE Lifts, a leading residential lift manufacturer in India, offers certified home lifts with expert installation for safe and reliable vertical mobility."
+        />
+      </Helmet>
       <HeroSection
         img={bannerImage}
         title="RESIDENTIAL LIFTS"

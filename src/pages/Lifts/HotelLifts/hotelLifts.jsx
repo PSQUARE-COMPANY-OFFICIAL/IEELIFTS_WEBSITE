@@ -8,12 +8,20 @@ import Faq from '../../../commonComponents/faq/Faq'
 import Footer from '../../../commonComponents/footer/footer'
 import HeroSection from '../../../commonComponents/HeroSection/HeroSection'
 import LiftFeatureCard from '../../../reusablecomponents/LiftFeatureCard/liftFeatureCard'
+import { Helmet } from 'react-helmet'
 const HotelLifts = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
   return (
     <div >
+      <Helmet>
+        <title>Hotel Lift Experts | Premium Lift Manufacturers – IEE Lifts</title>
+        <meta
+          name="description"
+          content="IEE Lifts is a leading manufacturer of hotel lifts, utilizing the latest technologies to offer customizable lift solutions tailored to your specific needs."
+        />
+      </Helmet>
       <HeroSection
         img={bannerImage}
         title="HOTEL LIFTS"
