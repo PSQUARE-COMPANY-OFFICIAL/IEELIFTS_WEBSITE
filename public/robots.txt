@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: 
+Allow: 
+Sitemap: https://ieelifts.com/sitemap.xml  # Provide the location of your sitemap
+
+# Optional: Delay between crawl requests (adjust as needed)
+Crawl-delay: 5

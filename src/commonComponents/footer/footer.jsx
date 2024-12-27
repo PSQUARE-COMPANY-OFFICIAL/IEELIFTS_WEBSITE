@@ -254,6 +254,15 @@ const Footer = () => {
           }
         </div>
       </div>
+      <div className="copyright_and_created_by" style={{display:'flex',justifyContent:'space-between'}}>
+          <p>© 2024 IEE LIFTS. All Rights Reserved.</p>
+          
+          <div className="created_by_div">
+            <h4>Created By</h4>
+          <NavLink to={'https://psquarecompany.com/'}>PSQUARE COMPANY</NavLink>
+          </div>
+          
+      </div>
     </footer>
   );
 };
